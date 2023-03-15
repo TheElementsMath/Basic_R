@@ -1,0 +1,408 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Basic Statistical Computing and Data Science Using R},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Basic Statistical Computing and Data Science Using R}
+\author{}
+\date{\vspace{-2.5em}}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+R is a programming language and open-source software environment used for statistical computing, data analysis, and visualization. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, in the mid-1990s. R is widely used in both academia and industry for a variety of data analysis tasks, from simple data cleaning and exploration to advanced statistical modeling and machine learning.
+
+The main strengths of R is its flexibility and ease of use. R has a rich set of built-in functions and packages, but users can also write their own functions and packages, making it possible to customize and extend the language to suit their needs. R has a large and active community of users and developers, who contribute new packages and functionality to the language on a regular basis. This means that R is constantly evolving, and new tools and techniques are being added all the time. It also means that if you are having trouble with R, finding the answer is often only a Google search away.
+
+R is particularly well-suited for statistical analysis and data visualization. It has a wide range of built-in statistical functions for data analysis, including basic descriptive statistics, hypothesis testing, regression analysis, and time series analysis. R also has powerful data visualization tools, with a variety of built-in plotting functions and packages for creating charts, graphs, and interactive visualizations. These visualization tools allow users to explore data and communicate their findings in a clear and effective way.
+
+Another key feature of R is its ability to handle large datasets. R can easily handle datasets with millions of observations and hundreds of variables, making it a popular choice for big data analysis. R also has tools for working with messy or incomplete data, including functions for data cleaning, imputation, and transformation.
+
+This book is a compilation of videos that will help you learn R. We will walk you through everything from installing R and RStudio to installing packages to basic statistics and some deeper data science algorithms. We will spend time discussing how to use R for statistical calculations and what the output that R generates means. Hopefully, when you are finished with this book, you will have a deeper understanding of statistics and data science and how these techniques can be applied to real life.
+
+\hypertarget{basic-installation}{%
+\chapter{Basic Installation}\label{basic-installation}}
+
+\hypertarget{r-and-rstudio}{%
+\section{R and RStudio}\label{r-and-rstudio}}
+
+R has become a popular tool for machine learning and artificial intelligence applications. It has a wide range of packages for machine learning, including tools for clustering, classification, and regression analysis. R is also used for deep learning and neural network analysis.
+
+RStudio is an integrated development environment (IDE) for R, designed to make it easier to write and run R code. It was created by the RStudio team, led by JJ Allaire, and first released in 2011. RStudio has become a popular tool for R users, particularly those who are new to the language.
+
+One of the key features of RStudio is its user-friendly interface. The IDE has a clean and intuitive layout, with multiple panes that allow users to view and edit their code, interact with the console, and view plots and other output. RStudio also has a variety of built-in tools and features that make it easier to write and debug R code, including syntax highlighting, code completion, and integrated debugging tools.
+
+RStudio also has a variety of tools for working with projects and packages. Users can create and manage projects, which are collections of R code, data, and other files that are organized in a single directory. RStudio also has a package manager, which allows users to install and manage R packages, and create their own packages.
+
+Together, R and RStudio form a powerful toolset for data analysis and statistical modeling. Let's begin by getting R and RStudio downloaded.
+
+\href{https://www.youtube.com/watch?v=N28rnKJKRmw\&list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p\&index=2}{How to download R and RStudio}
+
+\hypertarget{latex}{%
+\section{LateX}\label{latex}}
+
+LaTeX is a document preparation system that allows users to typeset and format high-quality documents, particularly those with mathematical equations, formulas, and symbols.
+
+RStudio integrates with LaTeX by allowing users to create and compile LaTeX documents directly from within the RStudio environment. This means that users can seamlessly integrate their R code and output into their LaTeX documents, making it easy to create reproducible research reports, manuscripts, and presentations.
+
+\href{https://www.youtube.com/watch?v=CvLIotw5YNs\&list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p\&index=3}{How to download LaTeX}
+
+\hypertarget{orientation}{%
+\section{Orientation}\label{orientation}}
+
+In this tutorial, we will learn how to open an RScript. We will learn about the numeric data type in RStudio and how to perform operations using the numeric data type; such as addition, subtraction, multiplication, division, square roots, exponentiation, and logarithms.
+
+\href{https://www.youtube.com/watch?v=94bFHGP1_ok\&list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p\&index=3}{R Orientation Part 1}
+
+In this tutorial, we will learn about the integer data type in RStudio. We will learn how to perform operations with the integer data type and the logical data type. We will also learn about the character data type.
+
+\href{https://www.youtube.com/watch?v=EsiYDZlmMhQ\&list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p\&index=4}{R Orientation Part 2}
+
+\hypertarget{libraries-in-r}{%
+\section{Libraries in R}\label{libraries-in-r}}
+
+In R, a library is a collection of pre-written R functions that extend the functionality of the base R system. Libraries can be loaded into R to provide additional capabilities for data manipulation, visualization, statistical analysis, and more.
+
+There are many libraries available in R, and they can be installed from the Comprehensive R Archive Network (CRAN), GitHub, or other sources. To use a library in R, it must first be installed and then loaded into the R session using the library() function. Once a library is loaded, its functions and other objects become available for use in the R session.
+
+Libraries in R can be incredibly useful for performing specific tasks that may not be included in the base R system. They can also save time and effort by providing pre-written code for common operations, allowing users to focus on their specific analysis or research questions rather than writing code from scratch. Finally, because R is an open-source language, users can contribute their own libraries and share them with the wider R community.
+
+This tutorial will give you a brief introduction to libraries in R.
+
+\href{https://www.youtube.com/watch?v=fy4Kc5f1Rhg\&list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p\&index=5}{R Libraries}
+
+\hypertarget{markdown}{%
+\section{Markdown}\label{markdown}}
+
+R Markdown is a markup language that enables the creation of dynamic and reproducible documents, reports, and presentations that integrate text, code, and data. R Markdown is based on the Markdown syntax and is designed to facilitate the creation of documents that combine R code, data analysis, and narrative text.
+
+With R Markdown, users can create documents in a variety of formats, including HTML, PDF, Word, and PowerPoint, among others.
+
+R Markdown documents are highly customizable, allowing users to control the appearance of their documents using a combination of Markdown syntax and customizable options. R Markdown also provides tools for including tables, figures, and interactive visualizations in documents.
+
+R Markdown is fully integrated with RStudio, making it easy to create, preview, and publish R Markdown documents from within the RStudio environment. This integration streamlines the workflow for creating and sharing reproducible research reports, making R Markdown a valuable tool for researchers, data scientists, and other professionals who need to communicate their findings in a clear and reproducible way.
+
+\href{https://www.youtube.com/watch?v=mor_pKCZPdc\&list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p\&index=7}{R Markdown}
+
+\hypertarget{cross}{%
+\chapter{Cross-references}\label{cross}}
+
+Cross-references make it easier for your readers to find and link to elements in your book.
+
+\hypertarget{chapters-and-sub-chapters}{%
+\section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
+
+There are two steps to cross-reference any heading:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Label the heading: \texttt{\#\ Hello\ world\ \{\#nice-label\}}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Leave the label off if you like the automated heading generated based on your heading title: for example, \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
+  \item
+    To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
+  \end{itemize}
+\item
+  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If you prefer text as the link instead of a numbered reference use: \protect\hyperlink{cross}{any text you want can go here}.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{captioned-figures-and-tables}{%
+\section{Captioned figures and tables}\label{captioned-figures-and-tables}}
+
+Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+
+See Figure \ref{fig:nice-fig}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{_main_files/figure-latex/nice-fig-1} 
+
+}
+
+\caption{Here is a nice figure!}\label{fig:nice-fig}
+\end{figure}
+
+Don't miss Table \ref{tab:nice-tab}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
+  \FunctionTok{head}\NormalTok{(pressure, }\DecValTok{10}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{booktabs =} \ConstantTok{TRUE}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+
+\caption{\label{tab:nice-tab}Here is a nice table!}
+\centering
+\begin{tabular}[t]{rr}
+\toprule
+temperature & pressure\\
+\midrule
+0 & 0.0002\\
+20 & 0.0012\\
+40 & 0.0060\\
+60 & 0.0300\\
+80 & 0.0900\\
+\addlinespace
+100 & 0.2700\\
+120 & 0.7500\\
+140 & 1.8500\\
+160 & 4.2000\\
+180 & 8.8000\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\hypertarget{parts}{%
+\chapter{Parts}\label{parts}}
+
+You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
+
+Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+
+Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+
+Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
+
+\hypertarget{footnotes-and-citations}{%
+\chapter{Footnotes and citations}\label{footnotes-and-citations}}
+
+\hypertarget{footnotes}{%
+\section{Footnotes}\label{footnotes}}
+
+Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
+
+\hypertarget{citations}{%
+\section{Citations}\label{citations}}
+
+Reference items in your bibliography file(s) using \texttt{@key}.
+
+For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
+Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
+
+The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
+
+\hypertarget{blocks}{%
+\chapter{Blocks}\label{blocks}}
+
+\hypertarget{equations}{%
+\section{Equations}\label{equations}}
+
+Here is an equation.
+
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \label{eq:binom}
+\end{equation}
+
+You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
+
+\hypertarget{theorems-and-proofs}{%
+\section{Theorems and proofs}\label{theorems-and-proofs}}
+
+Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
+
+\begin{theorem}
+\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
+and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
+\[a^2 + b^2 = c^2\]
+\end{theorem}
+
+Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
+
+\hypertarget{callout-blocks}{%
+\section{Callout blocks}\label{callout-blocks}}
+
+The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+
+\hypertarget{sharing-your-book}{%
+\chapter{Sharing your book}\label{sharing-your-book}}
+
+\hypertarget{publishing}{%
+\section{Publishing}\label{publishing}}
+
+HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+
+\hypertarget{pages}{%
+\section{404 pages}\label{pages}}
+
+By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+
+\hypertarget{metadata-for-sharing}{%
+\section{Metadata for sharing}\label{metadata-for-sharing}}
+
+Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
+
+This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
+
+Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
+
+Read more about the features of this output format here:
+
+\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
+
+Or use:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
+\end{Highlighting}
+\end{Shaded}
+
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
