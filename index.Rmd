@@ -1,6 +1,6 @@
 --- 
-title: "Business Mathematics"
-author: "Midterm and Final Exam Study Guide"
+title: "Basic Statistical Computing and Data Science Using R"
+author: " "
 date: " "
 site: bookdown::bookdown_site
 documentclass: book
@@ -11,10 +11,15 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-#   {-}
+#  {-}
 
 
+R is a programming language and open-source software environment used for statistical computing, data analysis, and visualization. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, in the mid-1990s. R is widely used in both academia and industry for a variety of data analysis tasks, from simple data cleaning and exploration to advanced statistical modeling and machine learning.
 
-The purpose of this e-book is to assist you in studying for MATH 114 at Okanagan College.  Questions in this book will be similar to those in the course.  While answers are provided, solution videos are available by clicking the accompanying link.  We make no guarantee that all topics are covered here.  Nor do we guarantee that all topics covered here will show up on your midterm/ final exam.  However, by mastering this material, you will be in a strong position to be successful in the course.
+The main strengths of R is its flexibility and ease of use. R has a rich set of built-in functions and packages, but users can also write their own functions and packages, making it possible to customize and extend the language to suit their needs. R has a large and active community of users and developers, who contribute new packages and functionality to the language on a regular basis. This means that R is constantly evolving, and new tools and techniques are being added all the time.  It also means that if you are having trouble with R, finding the answer is often only a Google search away.
 
-Best of luck!
+R is particularly well-suited for statistical analysis and data visualization. It has a wide range of built-in statistical functions for data analysis, including basic descriptive statistics, hypothesis testing, regression analysis, and time series analysis. R also has powerful data visualization tools, with a variety of built-in plotting functions and packages for creating charts, graphs, and interactive visualizations. These visualization tools allow users to explore data and communicate their findings in a clear and effective way.
+
+Another key feature of R is its ability to handle large datasets. R can easily handle datasets with millions of observations and hundreds of variables, making it a popular choice for big data analysis. R also has tools for working with messy or incomplete data, including functions for data cleaning, imputation, and transformation.
+
+This book is a compilation of videos that will help you learn R.  We will walk you through everything from installing R and RStudio to installing packages to basic statistics and some deeper data science algorithms.  We will spend time discussing how to use R for statistical calculations and what the output that R generates means.  Hopefully, when you are finished with this book, you will have a deeper understanding of statistics and data science and how these techniques can be applied to  real life.
