@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Basic Installation | Basic Statistical Computing and Data Science Using R</title>
+  <meta name="description" content="Chapter 1 Basic Installation | Basic Statistical Computing and Data Science Using R" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Basic Installation | Basic Statistical Computing and Data Science Using R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Basic Installation | Basic Statistical Computing and Data Science Using R" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="cross.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>I The Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="basic-installation.html"><a href="basic-installation.html"><i class="fa fa-check"></i><b>1</b> Basic Installation</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="basic-installation.html"><a href="basic-installation.html#r-and-rstudio"><i class="fa fa-check"></i><b>1.1</b> R and RStudio</a></li>
+<li class="chapter" data-level="1.2" data-path="basic-installation.html"><a href="basic-installation.html#latex"><i class="fa fa-check"></i><b>1.2</b> LateX</a></li>
+<li class="chapter" data-level="1.3" data-path="basic-installation.html"><a href="basic-installation.html#orientation"><i class="fa fa-check"></i><b>1.3</b> Orientation</a></li>
+<li class="chapter" data-level="1.4" data-path="basic-installation.html"><a href="basic-installation.html#libraries-in-r"><i class="fa fa-check"></i><b>1.4</b> Libraries in R</a></li>
+<li class="chapter" data-level="1.5" data-path="basic-installation.html"><a href="basic-installation.html#markdown"><i class="fa fa-check"></i><b>1.5</b> Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>2</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>2.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="2.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>2.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
+<li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>4.1</b> Footnotes</a></li>
+<li class="chapter" data-level="4.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>4.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>5</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>5.1</b> Equations</a></li>
+<li class="chapter" data-level="5.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>5.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="5.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>5.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>6</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>6.1</b> Publishing</a></li>
+<li class="chapter" data-level="6.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>6.2</b> 404 pages</a></li>
+<li class="chapter" data-level="6.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>6.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Basic Statistical Computing and Data Science Using R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basic-installation" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Basic Installation<a href="basic-installation.html#basic-installation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="r-and-rstudio" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> R and RStudio<a href="basic-installation.html#r-and-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R has become a popular tool for machine learning and artificial intelligence applications. It has a wide range of packages for machine learning, including tools for clustering, classification, and regression analysis. R is also used for deep learning and neural network analysis.</p>
+<p>RStudio is an integrated development environment (IDE) for R, designed to make it easier to write and run R code. It was created by the RStudio team, led by JJ Allaire, and first released in 2011. RStudio has become a popular tool for R users, particularly those who are new to the language.</p>
+<p>One of the key features of RStudio is its user-friendly interface. The IDE has a clean and intuitive layout, with multiple panes that allow users to view and edit their code, interact with the console, and view plots and other output. RStudio also has a variety of built-in tools and features that make it easier to write and debug R code, including syntax highlighting, code completion, and integrated debugging tools.</p>
+<p>RStudio also has a variety of tools for working with projects and packages. Users can create and manage projects, which are collections of R code, data, and other files that are organized in a single directory. RStudio also has a package manager, which allows users to install and manage R packages, and create their own packages.</p>
+<p>Together, R and RStudio form a powerful toolset for data analysis and statistical modeling. Let’s begin by getting R and RStudio downloaded.</p>
+<p><a href="https://www.youtube.com/watch?v=N28rnKJKRmw&amp;list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p&amp;index=2">How to download R and RStudio</a></p>
+</div>
+<div id="latex" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> LateX<a href="basic-installation.html#latex" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>LaTeX is a document preparation system that allows users to typeset and format high-quality documents, particularly those with mathematical equations, formulas, and symbols.</p>
+<p>RStudio integrates with LaTeX by allowing users to create and compile LaTeX documents directly from within the RStudio environment. This means that users can seamlessly integrate their R code and output into their LaTeX documents, making it easy to create reproducible research reports, manuscripts, and presentations.</p>
+<p><a href="https://www.youtube.com/watch?v=CvLIotw5YNs&amp;list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p&amp;index=3">How to download LaTeX</a></p>
+</div>
+<div id="orientation" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Orientation<a href="basic-installation.html#orientation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this tutorial, we will learn how to open an RScript. We will learn about the numeric data type in RStudio and how to perform operations using the numeric data type; such as addition, subtraction, multiplication, division, square roots, exponentiation, and logarithms.</p>
+<p><a href="https://www.youtube.com/watch?v=94bFHGP1_ok&amp;list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p&amp;index=3">R Orientation Part 1</a></p>
+<p>In this tutorial, we will learn about the integer data type in RStudio. We will learn how to perform operations with the integer data type and the logical data type. We will also learn about the character data type.</p>
+<p><a href="https://www.youtube.com/watch?v=EsiYDZlmMhQ&amp;list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p&amp;index=4">R Orientation Part 2</a></p>
+</div>
+<div id="libraries-in-r" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Libraries in R<a href="basic-installation.html#libraries-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In R, a library is a collection of pre-written R functions that extend the functionality of the base R system. Libraries can be loaded into R to provide additional capabilities for data manipulation, visualization, statistical analysis, and more.</p>
+<p>There are many libraries available in R, and they can be installed from the Comprehensive R Archive Network (CRAN), GitHub, or other sources. To use a library in R, it must first be installed and then loaded into the R session using the library() function. Once a library is loaded, its functions and other objects become available for use in the R session.</p>
+<p>Libraries in R can be incredibly useful for performing specific tasks that may not be included in the base R system. They can also save time and effort by providing pre-written code for common operations, allowing users to focus on their specific analysis or research questions rather than writing code from scratch. Finally, because R is an open-source language, users can contribute their own libraries and share them with the wider R community.</p>
+<p>This tutorial will give you a brief introduction to libraries in R.</p>
+<p><a href="https://www.youtube.com/watch?v=fy4Kc5f1Rhg&amp;list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p&amp;index=5">R Libraries</a></p>
+</div>
+<div id="markdown" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Markdown<a href="basic-installation.html#markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R Markdown is a markup language that enables the creation of dynamic and reproducible documents, reports, and presentations that integrate text, code, and data. R Markdown is based on the Markdown syntax and is designed to facilitate the creation of documents that combine R code, data analysis, and narrative text.</p>
+<p>With R Markdown, users can create documents in a variety of formats, including HTML, PDF, Word, and PowerPoint, among others.</p>
+<p>R Markdown documents are highly customizable, allowing users to control the appearance of their documents using a combination of Markdown syntax and customizable options. R Markdown also provides tools for including tables, figures, and interactive visualizations in documents.</p>
+<p>R Markdown is fully integrated with RStudio, making it easy to create, preview, and publish R Markdown documents from within the RStudio environment. This integration streamlines the workflow for creating and sharing reproducible research reports, making R Markdown a valuable tool for researchers, data scientists, and other professionals who need to communicate their findings in a clear and reproducible way.</p>
+<p><a href="https://www.youtube.com/watch?v=mor_pKCZPdc&amp;list=PLhMAuJ_imnt64NMgEKgy0JWKbA0sLoG4p&amp;index=7">R Markdown</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cross.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
