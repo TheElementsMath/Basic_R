@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Basic Statistical Computing and Data Science Using R</title>
-  <meta name="description" content="Basic Statistical Computing and Data Science Using R" />
+  <title>Chapter 2 Vectors &amp; Matrices | Basic Statistical Computing and Data Science Using R</title>
+  <meta name="description" content="Chapter 2 Vectors &amp; Matrices | Basic Statistical Computing and Data Science Using R" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Basic Statistical Computing and Data Science Using R" />
+  <meta property="og:title" content="Chapter 2 Vectors &amp; Matrices | Basic Statistical Computing and Data Science Using R" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Basic Statistical Computing and Data Science Using R" />
+  <meta name="twitter:title" content="Chapter 2 Vectors &amp; Matrices | Basic Statistical Computing and Data Science Using R" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="basic-installation.html"/>
+<link rel="prev" href="basic-installation.html"/>
+<link rel="next" href="parts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -167,13 +167,9 @@ div.csl-indent {
 <li class="chapter" data-level="1.4" data-path="basic-installation.html"><a href="basic-installation.html#libraries-in-r"><i class="fa fa-check"></i><b>1.4</b> Libraries in R</a></li>
 <li class="chapter" data-level="1.5" data-path="basic-installation.html"><a href="basic-installation.html#markdown"><i class="fa fa-check"></i><b>1.5</b> Markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-matrices-other-grouped-data.html"><a href="vectors-matrices-other-grouped-data.html"><i class="fa fa-check"></i><b>2</b> Vectors, Matrices &amp; Other Grouped Data</a>
+<li class="chapter" data-level="2" data-path="vectors-matrices.html"><a href="vectors-matrices.html"><i class="fa fa-check"></i><b>2</b> Vectors &amp; Matrices</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="vectors-matrices-other-grouped-data.html"><a href="vectors-matrices-other-grouped-data.html#vectors"><i class="fa fa-check"></i><b>2.1</b> Vectors</a></li>
-<li class="chapter" data-level="2.2" data-path="vectors-matrices-other-grouped-data.html"><a href="vectors-matrices-other-grouped-data.html#matrices"><i class="fa fa-check"></i><b>2.2</b> Matrices</a></li>
-<li class="chapter" data-level="2.3" data-path="vectors-matrices-other-grouped-data.html"><a href="vectors-matrices-other-grouped-data.html#lists"><i class="fa fa-check"></i><b>2.3</b> Lists</a></li>
-<li class="chapter" data-level="2.4" data-path="vectors-matrices-other-grouped-data.html"><a href="vectors-matrices-other-grouped-data.html#data-frames"><i class="fa fa-check"></i><b>2.4</b> Data Frames</a></li>
-<li class="chapter" data-level="2.5" data-path="vectors-matrices-other-grouped-data.html"><a href="vectors-matrices-other-grouped-data.html#data-from-external-sources"><i class="fa fa-check"></i><b>2.5</b> Data From External Sources</a></li>
+<li class="chapter" data-level="2.1" data-path="vectors-matrices.html"><a href="vectors-matrices.html#vectors"><i class="fa fa-check"></i><b>2.1</b> Vectors</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
 <li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
@@ -211,29 +207,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Basic Statistical Computing and Data Science Using R</h1>
-<p class="author"><em></em></p>
-</div>
-<div id="section" class="section level1 unnumbered">
-<h1 class="unnumbered"></h1>
-<p>R is a programming language and open-source software environment used for statistical computing, data analysis, and visualization. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, in the mid-1990s. R is widely used in both academia and industry for a variety of data analysis tasks, from simple data cleaning and exploration to advanced statistical modeling and machine learning.</p>
-<p>The main strengths of R is its flexibility and ease of use. R has a rich set of built-in functions and packages, but users can also write their own functions and packages, making it possible to customize and extend the language to suit their needs. R has a large and active community of users and developers, who contribute new packages and functionality to the language on a regular basis. This means that R is constantly evolving, and new tools and techniques are being added all the time. It also means that if you are having trouble with R, finding the answer is often only a Google search away.</p>
-<p>R is particularly well-suited for statistical analysis and data visualization. It has a wide range of built-in statistical functions for data analysis, including basic descriptive statistics, hypothesis testing, regression analysis, and time series analysis. R also has powerful data visualization tools, with a variety of built-in plotting functions and packages for creating charts, graphs, and interactive visualizations. These visualization tools allow users to explore data and communicate their findings in a clear and effective way.</p>
-<p>Another key feature of R is its ability to handle large datasets. R can easily handle datasets with millions of observations and hundreds of variables, making it a popular choice for big data analysis. R also has tools for working with messy or incomplete data, including functions for data cleaning, imputation, and transformation.</p>
-<p>This book is a compilation of videos that will help you learn R. We will walk you through everything from installing R and RStudio to installing packages to basic statistics and some deeper data science algorithms. We will spend time discussing how to use R for statistical calculations and what the output that R generates means. Hopefully, when you are finished with this book, you will have a deeper understanding of statistics and data science and how these techniques can be applied to real life.</p>
+<div id="vectors-matrices" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Vectors &amp; Matrices<a href="vectors-matrices.html#vectors-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="vectors" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Vectors<a href="vectors-matrices.html#vectors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In R, a vector is an ordered collection of elements of the same data type. Vectors can be created using the c() function or by using a sequence operator such as :.</p>
+<p>There are several types of vectors in R, including logical, integer, numeric, complex, and character vectors. Each type of vector has its own set of operations that can be performed on it. For example, arithmetic operations such as addition and multiplication are only allowed on numeric and complex vectors.</p>
+<p>One of the most useful features of vectors in R is their ability to be indexed. Elements of a vector can be accessed using square brackets [] and the index of the element. Indexing starts at 1 in R, so the first element of a vector can be accessed using [1].</p>
+<p>Vectorization is another powerful feature of R vectors. It allows operations to be performed on entire vectors at once, rather than having to loop through each element of the vector. This can lead to much faster and more efficient code.</p>
+<p>R also has several built-in functions for working with vectors, such as length(), which returns the number of elements in a vector, and sum(), which returns the sum of all the elements in a numeric vector.</p>
+<p>Overall, vectors are a fundamental data type in R and are essential for many data analysis tasks. Understanding how to create, manipulate, and access elements of vectors is an important skill for any R programmer.</p>
+<p>VIDEO - Create a vector, do some vector operations like + (talk about recycling rule). Combine vectors using c() perhaps discuss coercion.</p>
+<p>VIDEO - Talk about vector index (+ and -). Create new vectors from vector index, duplicate indexes, use : to range through index, Talk about logical vectors. Name vector members.</p>
 
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="basic-installation.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basic-installation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="parts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -264,7 +259,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cross-refs.Rmd",
 "text": "Edit"
 },
 "history": {
