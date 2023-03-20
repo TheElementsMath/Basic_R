@@ -1,0 +1,72 @@
+# (PART)  Some Basic Probability and Statistics {-}
+
+#  Learning About the Data
+
+By the end of this book, we want to be able to perform an exploratory data analysis.  In order to do so, we need to be able to discuss meaningful properties of our data.  In this chapter, we will discuss some visualization techniques for qualitative and quantitative data, some measures of central tendency and some measures of spread.  While putting these ideas together does not alone constitute an exploratory data analysis, we will take ideas learned from this chapter and use them extensively when we perform exploratory data analysis.
+
+
+##  Qualitative Data Visualization
+
+Qualitative data visualization is the process of representing non-numerical or categorical data in a visual form. Qualitative data refers to data that is non-numeric.  Visualizing qualitative data can help analysts identify patterns, trends, and relationships that may not be immediately apparent from the data alone.
+
+There are many types of qualitative data visualization techniques.  Here, we focus on some of the basic types:  Frequency distributions, Relative frequency distributions, Bar charts and Pie charts.
+
+
+Qualitative data visualization is an important tool for analyzing and understanding complex, non-numerical data. It can help analysts gain new insights and identify patterns and relationships that may not be immediately apparent from the data alone. However, it is important to approach qualitative data visualization with a critical eye and to be mindful of the subjectivity involved in interpreting the data.
+
+VIDEO - Frequency, relative frequency distributions.
+
+VIDEO - Bar charts & Pie charts
+
+
+
+##  Quantatiative Data Visualization
+
+Quantitative data visualization is the process of representing numerical data in a visual form. It is a powerful tool for communicating complex data in an intuitive and meaningful way. By using charts, graphs, and other visual aids, quantitative data visualization enables analysts to identify patterns, trends, and relationships in the data.
+
+There are many types of quantitative data visualization techniques, each suited to different types of data and research questions. Bar charts, column charts and histograms are commonly used to show the distribution of data. Scatter plots and line graphs are used to show the relationship between two or more variables. Box plots are used to show the distribution of data across different quartiles or percentiles.
+
+One important consideration when visualizing quantitative data is to choose the right type of visualization for the data and the research question. Different types of visualizations can emphasize different aspects of the data and may be more or less effective depending on the context. It is also important to ensure that the visualization accurately represents the data, without distorting or misleading the viewer.
+
+VIDEO - Frequency, relative frequency, cumulative frequency distributions.
+
+VIDEO - Frequency histograms, cumulative frequency plots, Scatter plots.
+
+
+
+##  Descriptive Statistics
+
+
+###  Measures of Central Tendency
+
+Measures of central tendency are statistical measures that describe the center or typical value of a dataset. They help summarize the data by providing a single value that represents the dataset as a whole. The three most common measures of central tendency are:
+
+Mean: This is the sum of all the values in a dataset divided by the number of values. It represents the average value of the dataset.
+
+Median: This is the middle value in a dataset, with half the values above and half the values below it. It represents the value that is most representative of the dataset.
+
+Mode: This is the value that occurs most frequently in a dataset. It represents the most common value in the dataset.
+
+The strengths and weaknesses of each will be discussed in the video below.
+
+VIDEO - Mean, median and mode
+
+
+###  Measures of Spread
+
+Measures of spread are statistical measures that describe how spread out or dispersed a dataset is. They help summarize the data by providing information on the variability or diversity of the dataset. The three most common measures of spread are:
+
+Range: This is the difference between the highest and lowest values in a dataset. It represents the extent of the spread of the data.
+
+Variance: This is the average of the squared differences between each value in a dataset and the mean. It represents how far the data points are from the mean.
+
+Standard deviation: This is the square root of the variance. It represents the typical distance between each data point and the mean.
+
+In general, measures of spread help us understand how similar or dissimilar the data points are from each other, and provide useful information for making inferences about the population from which the data was sampled.
+
+VIDEO - Quartile, percentile, range IQR and Boxplot
+
+VIDEO - SD, variance, skewness
+
+VIDEO - Covariance and Correlation Coefficient
+

@@ -1,0 +1,156 @@
+# Vectors, Matrices & Other Grouped Data
+
+Before we begin to manipulate data in R, it is important to see how data is dealt with.  Most data will come from an external file.  Once we read in that data, it is important to know how it is stored in R and how to change that data.  Ultimately, we want to be able to import data, clean it, explore it and then do some data analytics on it.  Knowing how data is handled in R will help us later when we attempt to use some of the built in functionality of R.
+
+While this section might not be the most exciting, it might be the most important.
+
+##  Vectors
+
+In R, a vector is an ordered collection of elements of the same data type. Vectors can be created using the c() function or by using a sequence operator such as :.
+
+There are several types of vectors in R, including logical, integer, numeric, complex, and character vectors. Each type of vector has its own set of operations that can be performed on it. For example, arithmetic operations such as addition and multiplication are only allowed on numeric and complex vectors.
+
+One of the most useful features of vectors in R is their ability to be indexed. Elements of a vector can be accessed using square brackets [] and the index of the element. Indexing starts at 1 in R, so the first element of a vector can be accessed using [1].
+
+
+Vectorization is another powerful feature of R vectors. It allows operations to be performed on entire vectors at once, rather than having to loop through each element of the vector. This can lead to much faster and more efficient code.
+
+R also has several built-in functions for working with vectors, such as length(), which returns the number of elements in a vector, and sum(), which returns the sum of all the elements in a numeric vector.
+
+Overall, vectors are a fundamental data type in R and are essential for many data analysis tasks. Understanding how to create, manipulate, and access elements of vectors is an important skill for any R programmer.
+
+VIDEO - Create a vector, do some vector operations like + (talk about recycling rule).  Combine vectors using c() perhaps discuss coercion.
+
+VIDEO - Talk about vector index (+ and -).  Create new vectors from vector index, duplicate indexes, use : to range through index, Talk about logical vectors.  Name vector members.
+
+Some vector functions that might be useful for you to explore include:
+
+1.  length(): returns the number of elements in a vector.
+2.  sum(): returns the sum of all the elements in a numeric vector.
+3.  mean(): returns the arithmetic mean of all the elements in a numeric vector.
+4.  min(): returns the minimum value in a vector.
+5.  max(): returns the maximum value in a vector.
+6.  sort(): sorts the elements in a vector in ascending or descending order.
+7.  unique(): returns a vector with only the unique elements from a given vector.
+8.  rev(): reverses the order of the elements in a vector.
+9.  rep(): replicates a vector a given number of times.
+10.  paste(): concatenates two or more character vectors.
+11.  substr(): extracts a substring from a character vector.
+12.  toupper() and tolower(): convert all the letters in a character vector to uppercase or lowercase, respectively.
+13.  cumsum(): returns the cumulative sum of the elements in a numeric vector.
+14.  diff(): returns the differences between consecutive elements in a numeric vector.
+15.  which(): returns the indices of the elements in a vector that meet a certain condition.
+
+##  Matrices
+
+In R, a matrix is a two-dimensional array of elements of the same data type, organized into rows and columns. Matrices can be created using the matrix() function, which takes in a vector of elements and the number of rows and columns to arrange them in.
+
+Matrices in R can be indexed using row and column numbers, similar to how elements of vectors are accessed using index values. Indexing starts at 1 in R, so the element in the first row and first column of a matrix can be accessed using [1,1].
+
+R also has several built-in functions for working with matrices. For example, dim() returns the dimensions of a matrix, rowSums() returns the sum of the elements in each row of a matrix, and colMeans() returns the mean of the elements in each column of a matrix.
+
+One important feature of matrices in R is that they can be used to perform matrix operations such as multiplication, addition, and inversion. These operations are especially useful in linear algebra and statistical analysis.
+
+Another useful feature of matrices in R is that they can be converted to other types of objects, such as data frames, which are commonly used for data analysis.
+
+Matrices are a powerful tool in R for organizing and manipulating data in a two-dimensional format. Understanding how to create, index, and perform operations on matrices is vital to be proficient in R.
+
+VIDEO - Construct a matrix using "matrix( C(), nrow = )".  Extract specific values, rows, columns, name rows/ columns.  cbind, rbind.
+
+VIDEO - Matrix Arithmetic, Transpose matrix, determinant
+
+Some of the many functions that are useful to know when dealing with matrices include:
+
+1.  matrix(): creates a matrix from a vector of elements and the number of rows and columns.
+2.  dim(): returns the dimensions of a matrix.
+3.  t(): returns the transpose of a matrix.
+4.  diag(): creates a diagonal matrix from a vector of elements.
+5.  det(): returns the determinant of a matrix.
+6.  solve(): solves a system of linear equations.
+7.  %*%: performs matrix multiplication.
+8.  crossprod(): returns the cross-product of two matrices.
+9.  eigen(): returns the eigenvalues and eigenvectors of a matrix.
+10.  rowSums(): returns the sum of the elements in each row of a matrix.
+11.  colMeans(): returns the mean of the elements in each column of a matrix.
+12.  apply(): applies a function to either rows or columns of a matrix.
+13.  cbind(): combines matrices by column.
+14.  rbind(): combines matrices by row.
+15.  qr(): computes the QR decomposition of a matrix.
+
+
+
+##  Lists
+
+
+In R, a list is a data structure that allows you to store multiple elements of different types. Lists can contain any R object, including other lists, vectors, matrices, data frames, and even functions.
+
+To create a list in R, you use the list() function, which takes any number of arguments separated by commas and returns a new list. 
+
+Lists in R are indexed using double square brackets ([[ ]]) or single square brackets ([ ]) with a numeric or character index. The double square brackets extract the element itself, while the single square brackets return a new list containing only the specified elements.
+
+Lists are widely used in R for a variety of tasks, such as storing and manipulating complex data structures, passing arguments to functions, and creating nested data structures. With their flexibility and versatility, lists are an essential data structure in R programming.
+
+VIDEO - Create a list, use [] and [[]] to extract items from a list.  Name members of a list, 
+
+Some of the essential functions for lists include:
+
+1.  list() - This function creates a new list object and initializes it with specified elements.
+2.  unlist() - This function is used to simplify a list object by flattening it into a vector.
+3.  length() - This function returns the number of elements in a list.
+4.  names() - This function retrieves or sets the names of the elements in a list.
+5.  [[ ]] - This operator is used to extract a single element from a list by its index or name.
+6.  $[ ]$ - This operator is used to extract a subset of a list by its index or name.
+7.  append() - This function is used to add new elements to the end of a list.
+8.  rev() - This function reverses the order of the elements in a list.
+9.  sort() - This function sorts the elements in a list in ascending or descending order.
+10.  split() - This function is used to split a list into smaller sub-lists based on a specified criterion.
+11.  lapply() - This function applies a specified function to each element in a list and returns a new list containing the results.
+12.  sapply() - This function applies a specified function to each element in a list and returns a simplified result, such as a vector or matrix.
+
+
+##  Data Frames
+
+A data frame is a two-dimensional tabular data structure that consists of rows and columns, similar to a spreadsheet. Importantly, each column in a data frame can have a different data type, making this structure very flexible. This flexibility is why data frames are one of the most commonly used data structures for data analysis and manipulation.
+
+Creating a data frame in R is straightforward. You can create a data frame from existing vectors, lists, or matrices using the data.frame() function. Each vector or list will be used as a column in the data frame, and the length of each column should be the same.
+
+Once you have a data frame, you can perform various operations on it, such as selecting rows and columns, filtering data based on certain conditions, sorting data, merging data frames, and more. R provides a wide range of functions for these operations, including the subset(), select(), filter(), arrange(), and merge() functions.
+
+Data frames also play a crucial role in data visualization in R. The flexibility of the data frame structure allows users to create plots with a high degree of customization ultimately resulting in publication-quality visualizations.
+
+VIDEO - Creating DFs, nrow, head, column slices, row slices, (Ignore dplyr)
+
+Some common functions for data frames include:
+
+1.  head() and tail(): These functions allow you to view the first or last few rows of a data frame, respectively.
+2.  summary(): This function provides a summary of the variables in a data frame, including measures of central tendency, dispersion, and the number of missing values.
+3.  str(): This function provides information about the structure of a data frame, including the variable types and the number of observations.
+4.  subset(): This function allows you to extract a subset of rows or columns from a data frame based on a specific condition.
+5.  merge(): This function allows you to merge two or more data frames into a single data frame based on a common variable.
+6.  transform() and mutate(): These functions allow you to create new variables in a data frame based on existing variables or perform mathematical operations on existing variables.
+7.  aggregate(): This function allows you to compute summary statistics for subsets of data based on one or more grouping variables.
+8.  reshape(): This function allows you to reshape a data frame from a wide format to a long format or vice versa.
+9.  dplyr package: This package provides a set of functions that allow for easy data manipulation, including select(), filter(), arrange(), group_by(), and summarise().
+
+
+
+##  Data From External Sources
+
+R provides several functions to read data from different file formats and data sources. Here are some of the most commonly used ways to read data into R:
+
+1.  read.csv() or read.table() - These functions are used to read data from text files in CSV or tab-separated values (TSV) format.
+2.  read.xlsx() - This function is used to read data from Microsoft Excel spreadsheets.
+3.  read_sql() or DBI::dbGetQuery() - These functions are used to read data from SQL databases.
+4.  readr::read_csv() - This function is an alternative to read.csv() and provides faster reading of CSV files.
+5.  haven::read_sas(), read_spss(), or read_dta() - These functions are used to read data from SAS, SPSS, or Stata data files, respectively.
+6.  jsonlite::fromJSON() - This function is used to read data from JSON files.
+7.  httr::GET() or RCurl::getURL() - These functions are used to read data from web APIs or websites.
+8.  readLines() - This function is used to read data from text files line by line.
+9.  scan() - This function is used to read data from text files that do not have a fixed format.
+10.  readClipboard() - This function is used to read data from the system clipboard.
+
+These functions provide a wide range of options for reading data into R, making it easy to import data from different file formats and data sources. Additionally, R also has several packages that provide specialized functions for reading data, such as readxl for reading Excel files or rvest for scraping data from websites.
+
+VIDEO - Read in data from some different sources.
+
+
