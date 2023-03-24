@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="hypothesis-testing.html"/>
-<link rel="next" href="codebooks.html"/>
+<link rel="next" href="data-dictionaries.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -103,8 +103,21 @@
 <li class="chapter" data-level="4" data-path="probability-distributions.html"><a href="probability-distributions.html"><i class="fa fa-check"></i><b>4</b> Probability Distributions</a></li>
 <li class="chapter" data-level="5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>5</b> Hypothesis Testing</a></li>
 <li class="part"><span><b>III Creating Codebooks</b></span></li>
-<li class="chapter" data-level="6" data-path="missing-data.html"><a href="missing-data.html"><i class="fa fa-check"></i><b>6</b> Missing Data</a></li>
-<li class="chapter" data-level="7" data-path="codebooks.html"><a href="codebooks.html"><i class="fa fa-check"></i><b>7</b> Codebooks</a></li>
+<li class="chapter" data-level="6" data-path="missing-data.html"><a href="missing-data.html"><i class="fa fa-check"></i><b>6</b> Missing Data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="missing-data.html"><a href="missing-data.html#dealing-with-missing-data"><i class="fa fa-check"></i><b>6.1</b> Dealing with Missing Data</a></li>
+<li class="chapter" data-level="6.2" data-path="missing-data.html"><a href="missing-data.html#types-of-missing-data"><i class="fa fa-check"></i><b>6.2</b> Types of Missing Data</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-dictionaries.html"><a href="data-dictionaries.html"><i class="fa fa-check"></i><b>7</b> Data Dictionaries</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="data-dictionaries.html"><a href="data-dictionaries.html#purpose-of-a-data-dictionary"><i class="fa fa-check"></i><b>7.1</b> Purpose of a Data Dictionary</a></li>
+<li class="chapter" data-level="7.2" data-path="data-dictionaries.html"><a href="data-dictionaries.html#components-of-a-data-dictionary"><i class="fa fa-check"></i><b>7.2</b> Components of a Data Dictionary</a></li>
+<li class="chapter" data-level="7.3" data-path="data-dictionaries.html"><a href="data-dictionaries.html#benefits-of-using-a-data-dictionary"><i class="fa fa-check"></i><b>7.3</b> Benefits of Using a Data Dictionary</a></li>
+<li class="chapter" data-level="7.4" data-path="data-dictionaries.html"><a href="data-dictionaries.html#examples"><i class="fa fa-check"></i><b>7.4</b> Examples</a></li>
+</ul></li>
+<li class="part"><span><b>IV The Tidyverse</b></span></li>
+<li class="chapter" data-level="8" data-path="dplyr.html"><a href="dplyr.html"><i class="fa fa-check"></i><b>8</b> dplyr</a></li>
+<li class="chapter" data-level="9" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>9</b> ggplot2</a></li>
 </ul>
 
       </nav>
@@ -124,7 +137,72 @@
             <section class="normal" id="section-">
 <div id="missing-data" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Missing Data<a href="missing-data.html#missing-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Dealing with missing data is a common problem in data analysis, as it can significantly impact the accuracy of results and the validity of conclusions drawn from the data. Missing data can occur for a variety of reasons, such as errors in data collection, survey non-response, data entry, or data processing. It is therefore important for data analysts to have a good understanding of how to handle missing data to ensure that their results are reliable and accurate.</p>
+<div id="dealing-with-missing-data" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Dealing with Missing Data<a href="missing-data.html#dealing-with-missing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Complete Case Analysis (CCA)</strong>
+Complete case analysis (CCA) is one of the simplest and most common methods used to handle missing data. CCA involves analyzing only the cases (rows) that have complete data for all variables (columns) of interest, discarding any cases that have missing data. This method can be effective when the amount of missing data is small, and when the missing data is not systematically related to the variables of interest. However, it can result in biased results if the missing data is systematically related to the variables being analyzed.</p>
+<p><strong>Pairwise Deletion</strong>
+Pairwise deletion involves analyzing each variable separately, using only the cases that have complete data for that variable. This method can be effective when the amount of missing data is small and when the missing data is not systematically related to the variables of interest. However, like CCA, it can result in biased results if the missing data is systematically related to the variables being analyzed.</p>
+<p><strong>Imputation</strong>
+Imputation involves filling in missing data with estimated values. There are several methods of imputation, including mean imputation, regression imputation, and multiple imputation. Mean imputation involves replacing missing values with the mean of the available values for that variable. Regression imputation involves using regression analysis to estimate missing values based on the relationship between the variable of interest and other variables in the dataset. Multiple imputation involves creating multiple imputed datasets and analyzing each dataset separately to generate an overall estimate.</p>
+<p>Imputation can be an effective method of handling missing data when the amount of missing data is moderate and when the missing data is not systematically related to the variables being analyzed. However, it can result in biased results if the missing data is systematically related to the variables being analyzed.</p>
+<p><strong>Sensitivity Analysis</strong>
+Sensitivity analysis involves examining the impact of different assumptions about the missing data on the results of the analysis. This method can help to identify the extent to which the results are affected by the missing data and to assess the robustness of the results. It can also help to identify potential biases or confounding factors that may be affecting the results.</p>
+<p><strong>Model-based Methods</strong>
+Model-based methods involve using statistical models to estimate the missing data (for example, linear regression). These methods can be effective when the amount of missing data is large and when the missing data is systematically related to the variables being analyzed. However, they can be complex and may require advanced statistical knowledge and expertise.</p>
+<p><strong>Hot Deck/ Cold Deck Imputation</strong>
+Hot deck imputation involves using data from similar cases to impute missing values. Cold deck imputation involves using data from a previous study or dataset to impute missing values.</p>
+<p>It is important for data analysts to carefully consider the advantages and disadvantages of each method and to use appropriate techniques to ensure that their results are reliable and accurate.</p>
+</div>
+<div id="types-of-missing-data" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Types of Missing Data<a href="missing-data.html#types-of-missing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before deciding on a method to deal with missing data, it is important to understand why the data is missing. There are three types of missing data patterns: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR).</p>
+<p><strong>Missing Completely at Random (MCAR)</strong>
+MCAR occurs when the probability of a data point being missing is unrelated to the value of the variable or any other variables in the dataset. This means that the missing data is completely random, and there is no pattern to the missing values.</p>
+<p>MCAR is the most ideal type of missing data, as it does not introduce any bias into the analysis. In this case, the analysis can simply be performed on the subset of the data with complete observations, without any adjustments.</p>
+<p>For example, in a study of height and weight, if some participants did not report their weight because they forgot or did not want to, and there is no relationship between the missing data and any other variables in the dataset, then the missing data is MCAR.</p>
+<p><strong>Missing at Random (MAR)</strong>
+MAR occurs when the probability of a data point being missing is related to the value of another variable in the dataset. This means that the missing data is not completely random, but is related to other variables in the dataset.</p>
+<p>In other words, the probability of missing data is dependent on the observed data, but not on the missing data itself. This means that the missing data is not informative on its own, but can be predicted based on other variables in the dataset.</p>
+<p>MAR is a common type of missing data in survey research, where individuals may choose not to respond to certain questions based on their answers to previous questions.</p>
+<p>For example, in a study of income and education, if individuals with lower income are more likely to not respond to a survey question about income, then the missing data is MAR.</p>
+<p><strong>Missing Not at Random (MNAR)</strong>
+MNAR occurs when the probability of a data point being missing is related to the value of the missing variable itself. This means that the missing data is not random, and cannot be predicted based on other variables in the dataset.</p>
+<p>MNAR is the most problematic type of missing data, as it can introduce bias into the analysis. This is because the missing data is related to the variable being analyzed, and may affect the conclusions drawn from the analysis.</p>
+<p>For example, in a study of mental health and job satisfaction, if individuals with higher anxiety levels are less likely to respond to a survey question about anxiety, then the missing data is MNAR.</p>
+<p>Dealing with MNAR data is challenging because it requires knowledge of the missing data mechanism, which may not be possible to determine. In general, it is important to be cautious when analyzing MNAR data and to use sensitivity analyses to assess the robustness of the results.</p>
+<p><strong>EXAMPLE:</strong> Classify the following as MAR, MCAR or MNAR:</p>
+<ol style="list-style-type: decimal">
+<li>In a survey of voting behavior, some respondents accidentally left a question blank due to a technical error in the survey software.</li>
+<li>In a survey of health behaviors, individuals who smoke may be more likely to skip questions about smoking-related behaviors.</li>
+<li>In a survey of addiction, individuals who are struggling with substance abuse may be less likely to report the extent of their substance use.</li>
+<li>In a study of income and debt, individuals who are struggling with debt may be less likely to report their income accurately.</li>
+<li>In a study of exercise and depression, participants with higher levels of depression may be more likely to skip questions about their exercise habits.</li>
+<li>In a clinical trial, some patients did not complete the study due to unrelated personal reasons, such as moving out of town.</li>
+<li>In a study of political beliefs, individuals who are more liberal may be more likely to skip questions about their income.</li>
+<li>In a study of weather patterns, some weather stations experienced temporary power outages, causing some data to be missing.</li>
+<li>In a study of mental health and medication usage, individuals who are not compliant with their medication regimen may be less likely to report their medication use accurately.</li>
+<li>In a study of political beliefs and race, individuals who hold extreme political beliefs may be less likely to report their race accurately.</li>
+<li>In a study of income and age, some participants forgot to report their income in the survey.</li>
+<li>In a survey of shopping habits, individuals with lower income may be more likely to skip questions about their spending habits.</li>
+<li>In a study of social media usage, some participants did not complete a survey due to a personal emergency.</li>
+<li>In a study of health behaviors and sexual orientation, individuals who belong to marginalized sexual orientation groups may be less likely to report certain health behaviors accurately.</li>
+<li>In a study of dietary habits, individuals with higher body mass index may be more likely to skip questions about their food intake.</li>
+</ol>
+<p>VIDEO - Solutions to the problems.</p>
+<p><strong>Example:</strong> Classify the missing data and suggest an imputation technique for each case:</p>
+<ol style="list-style-type: decimal">
+<li>In a study of height and weight, some participants did not report their weight, but the missing data is unrelated to any other variable in the dataset.</li>
+<li>In a study of income and education, some individuals with lower income were less likely to respond to a survey question about income.</li>
+<li>In a study of health outcomes and medication usage, some medication usage responses are missing for some participants and may be related to multiple other variables such as age, health status, and income.</li>
+<li>In a study of housing prices and demographics, housing prices are missing for some participants in a certain neighborhood.</li>
+<li>In a longitudinal study of health outcomes and medication usage, medication usage is missing for some participants in a follow-up survey.</li>
+<li>In a study of blood pressure and medication usage, medication usage is missing for some participants in a follow-up survey.</li>
+</ol>
+<p>VIDEO - Solutions to the problems.</p>
 
+</div>
 </div>
             </section>
 
@@ -132,7 +210,7 @@
         </div>
       </div>
 <a href="hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="codebooks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-dictionaries.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,3 +1,90 @@
 # (PART)  Creating Codebooks {-}
 
 #  Missing Data
+
+Dealing with missing data is a common problem in data analysis, as it can significantly impact the accuracy of results and the validity of conclusions drawn from the data. Missing data can occur for a variety of reasons, such as errors in data collection, survey non-response, data entry, or data processing. It is therefore important for data analysts to have a good understanding of how to handle missing data to ensure that their results are reliable and accurate. 
+
+##  Dealing with Missing Data
+
+__Complete Case Analysis (CCA)__
+Complete case analysis (CCA) is one of the simplest and most common methods used to handle missing data. CCA involves analyzing only the cases (rows) that have complete data for all variables (columns) of interest, discarding any cases that have missing data. This method can be effective when the amount of missing data is small, and when the missing data is not systematically related to the variables of interest. However, it can result in biased results if the missing data is systematically related to the variables being analyzed.
+
+__Pairwise Deletion__
+Pairwise deletion involves analyzing each variable separately, using only the cases that have complete data for that variable. This method can be effective when the amount of missing data is small and when the missing data is not systematically related to the variables of interest. However, like CCA, it can result in biased results if the missing data is systematically related to the variables being analyzed.
+
+__Imputation__
+Imputation involves filling in missing data with estimated values. There are several methods of imputation, including mean imputation, regression imputation, and multiple imputation. Mean imputation involves replacing missing values with the mean of the available values for that variable. Regression imputation involves using regression analysis to estimate missing values based on the relationship between the variable of interest and other variables in the dataset. Multiple imputation involves creating multiple imputed datasets and analyzing each dataset separately to generate an overall estimate.
+
+Imputation can be an effective method of handling missing data when the amount of missing data is moderate and when the missing data is not systematically related to the variables being analyzed. However, it can result in biased results if the missing data is systematically related to the variables being analyzed.
+
+__Sensitivity Analysis__
+Sensitivity analysis involves examining the impact of different assumptions about the missing data on the results of the analysis. This method can help to identify the extent to which the results are affected by the missing data and to assess the robustness of the results. It can also help to identify potential biases or confounding factors that may be affecting the results.
+
+__Model-based Methods__
+Model-based methods involve using statistical models to estimate the missing data (for example, linear regression). These methods can be effective when the amount of missing data is large and when the missing data is systematically related to the variables being analyzed. However, they can be complex and may require advanced statistical knowledge and expertise.
+
+__Hot Deck/ Cold Deck Imputation__ 
+Hot deck imputation involves using data from similar cases to impute missing values.  Cold deck imputation involves using data from a previous study or dataset to impute missing values.
+
+It is important for data analysts to carefully consider the advantages and disadvantages of each method and to use appropriate techniques to ensure that their results are reliable and accurate.
+
+##  Types of Missing Data
+
+Before deciding on a method to deal with missing data, it is important to understand why the data is missing. There are three types of missing data patterns: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR).
+
+__Missing Completely at Random (MCAR)__
+MCAR occurs when the probability of a data point being missing is unrelated to the value of the variable or any other variables in the dataset. This means that the missing data is completely random, and there is no pattern to the missing values.
+
+MCAR is the most ideal type of missing data, as it does not introduce any bias into the analysis. In this case, the analysis can simply be performed on the subset of the data with complete observations, without any adjustments.
+
+For example, in a study of height and weight, if some participants did not report their weight because they forgot or did not want to, and there is no relationship between the missing data and any other variables in the dataset, then the missing data is MCAR.
+
+__Missing at Random (MAR)__
+MAR occurs when the probability of a data point being missing is related to the value of another variable in the dataset. This means that the missing data is not completely random, but is related to other variables in the dataset.
+
+In other words, the probability of missing data is dependent on the observed data, but not on the missing data itself. This means that the missing data is not informative on its own, but can be predicted based on other variables in the dataset.
+
+MAR is a common type of missing data in survey research, where individuals may choose not to respond to certain questions based on their answers to previous questions.
+
+For example, in a study of income and education, if individuals with lower income are more likely to not respond to a survey question about income, then the missing data is MAR. 
+
+__Missing Not at Random (MNAR)__
+MNAR occurs when the probability of a data point being missing is related to the value of the missing variable itself. This means that the missing data is not random, and cannot be predicted based on other variables in the dataset.
+
+MNAR is the most problematic type of missing data, as it can introduce bias into the analysis. This is because the missing data is related to the variable being analyzed, and may affect the conclusions drawn from the analysis.
+
+For example, in a study of mental health and job satisfaction, if individuals with higher anxiety levels are less likely to respond to a survey question about anxiety, then the missing data is MNAR.
+
+Dealing with MNAR data is challenging because it requires knowledge of the missing data mechanism, which may not be possible to determine. In general, it is important to be cautious when analyzing MNAR data and to use sensitivity analyses to assess the robustness of the results.
+
+__EXAMPLE:__  Classify the following as MAR, MCAR or MNAR:
+
+  1.  In a survey of voting behavior, some respondents accidentally left a question blank due to a technical error in the survey software.
+  2.  In a survey of health behaviors, individuals who smoke may be more likely to skip questions about smoking-related behaviors.
+  3.  In a survey of addiction, individuals who are struggling with substance abuse may be less likely to report the extent of their substance use.
+  4.  In a study of income and debt, individuals who are struggling with debt may be less likely to report their income accurately.
+  5.  In a study of exercise and depression, participants with higher levels of depression may be more likely to skip questions about their exercise habits.
+  6.  In a clinical trial, some patients did not complete the study due to unrelated personal reasons, such as moving out of town.
+  7.  In a study of political beliefs, individuals who are more liberal may be more likely to skip questions about their income.
+  8.  In a study of weather patterns, some weather stations experienced temporary power outages, causing some data to be missing.
+  9.  In a study of mental health and medication usage, individuals who are not compliant with their medication regimen may be less likely to report their medication use accurately.
+  10.  In a study of political beliefs and race, individuals who hold extreme political beliefs may be less likely to report their race accurately.
+  11.  In a study of income and age, some participants forgot to report their income in the survey.
+  12.  In a survey of shopping habits, individuals with lower income may be more likely to skip questions about their spending habits.
+  13.  In a study of social media usage, some participants did not complete a survey due to a personal emergency.
+  14.  In a study of health behaviors and sexual orientation, individuals who belong to marginalized sexual orientation groups may be less likely to report certain health behaviors accurately.
+  15.  In a study of dietary habits, individuals with higher body mass index may be more likely to skip questions about their food intake.
+
+VIDEO - Solutions to the problems.
+
+__Example:__  Classify the missing data and suggest an imputation technique for each case:
+
+  1.   In a study of height and weight, some participants did not report their weight, but the missing data is unrelated to any other variable in the dataset.
+  2.  In a study of income and education, some individuals with lower income were less likely to respond to a survey question about income.
+  3.   In a study of health outcomes and medication usage, some medication usage responses are missing for some participants and may be related to multiple other variables such as age, health status, and income.
+  4.  In a study of housing prices and demographics, housing prices are missing for some participants in a certain neighborhood.
+  5.  In a longitudinal study of health outcomes and medication usage, medication usage is missing for some participants in a follow-up survey.
+  6.   In a study of blood pressure and medication usage, medication usage is missing for some participants in a follow-up survey.
+
+VIDEO - Solutions to the problems.
+

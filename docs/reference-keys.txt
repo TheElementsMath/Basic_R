@@ -19,4 +19,12 @@ measures-of-spread
 probability-distributions
 hypothesis-testing
 missing-data
-codebooks
+dealing-with-missing-data
+types-of-missing-data
+data-dictionaries
+purpose-of-a-data-dictionary
+components-of-a-data-dictionary
+benefits-of-using-a-data-dictionary
+examples
+dplyr
+ggplot2

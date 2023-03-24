@@ -1,0 +1,60 @@
+#  (PART)  The Tidyverse {-}
+
+#  dplyr
+
+
+dplyr is a widely-used R package for data manipulation and transformation. A part of the tidyverse, created by Hadley Wickham, the dplyr package provides a fast and intuitive grammar for data manipulation, making it easier for users to manipulate and analyze data with less code. dplyr is built around five main functions: 
+
+  *  filter(): This command is used to select a subset of rows from a data frame based on some condition or set of conditions. For example, if you had a data frame called df and wanted to select only rows where the age variable was greater than or equal to 18, you could use the following code: filter(df, age >= 18).
+  *  select(): This command is used to select a subset of columns from a data frame. For example, if you had a data frame called df with columns called age, gender, and income, and you only wanted to keep the age and income columns, you could use the following code: select(df, age, income).
+  *  mutate(): This command is used to create new variables (i.e., columns) in a data frame based on some computation or transformation of existing variables. For example, if you had a data frame called df with columns called height and weight, and you wanted to create a new variable called bmi that calculated the body mass index for each observation, you could use the following code: mutate(df, bmi = weight / (height^2)).
+  *  summarise(): This command is used to compute summary statistics (e.g., mean, median, standard deviation) for groups of observations based on some grouping variable(s). For example, if you had a data frame called df with columns called group (which had two levels, "A" and "B") and value, and you wanted to compute the mean value for each group, you could use the following code: summarise(group_by(df, group), mean_value = mean(value)).
+  *  arrange(): This command is used to sort the rows of a data frame based on one or more variables. For example, if you had a data frame called df with columns called name and age, and you wanted to sort the data frame by age (in ascending order), you could use the following code: arrange(df, age).
+
+These functions allow users to select, filter, arrange, and summarize data in a more efficient and intuitive manner.
+
+One of the key advantages of dplyr is its speed. dplyr is designed to work efficiently with large datasets, making use of optimized C++ code to perform operations much faster than base R. This means that users can work with larger datasets and complete their analyses more quickly.
+
+Another advantage of dplyr is its syntax. The syntax is designed to be intuitive and easy to learn. The five main functions (filter(), select(), mutate(), summarise(), and arrange()) are all easy to understand and use. 
+
+dplyr also allows users to chain together multiple operations using the %>% operator. This can make code more readable and easier to understand. 
+
+VIDEO - dplyr pipe operator
+
+VIDEO - dplyr filter()
+VIDEO - dplyr select()
+VIDEO - dplyr mutate()
+VIDEO - dplyr summarise/ summarise_at()
+VIDEO - dplyr arrange()
+VIDEO - dplyr group_by()
+VIDEO - dplyr left_join()
+VIDEO - dplyr right_join()
+VIDEO - dplyr full_join()
+
+A longer list of dplyr commands includes:
+
+  1.  filter(): This command is used to subset rows based on a logical condition(s).
+  2.  select(): This command is used to subset columns of a data frame.
+  3.  mutate(): This command is used to create new variables by transforming or computing based on existing variables.
+  4.  arrange(): This command is used to sort a data frame by one or more variables.
+  5.  group_by(): This command is used to group data by one or more variables.
+  6.  summarize(): This command is used to compute summary statistics for each group in a data frame.
+  7.  %>% (pipe operator): This command is used to chain together multiple dplyr commands.
+  8.  left_join(): This command is used to join two data frames by a common variable(s), keeping all rows from the first data frame and matching rows from the second data frame.
+  9.  right_join(): This command is used to join two data frames by a common variable(s), keeping all rows from the second data frame and matching rows from the first data frame.
+  10.  full_join(): This command is used to join two data frames by a common variable(s), keeping all rows from both data frames.
+  11.  rename(): This command is used to rename columns in a data frame.
+  12.  distinct(): This command is used to return unique rows of a data frame.
+  13.  count(): This command is used to count the number of observations by group in a data frame.
+  14.  case_when(): This command is used to create a new variable with conditional logic.
+  15.  if_else(): This command is used to create a new variable with if-else logic.
+  16.  between(): This command is used to subset rows based on a range of values.
+  17.  top_n(): This command is used to return the top n observations by a specified variable.
+  18.  slice(): This command is used to subset rows by row number.
+  19.  n(): This command is used to count the number of rows in a data frame.
+  20.  min(), max(), mean(), median(), sum(): These commands are used to compute basic summary statistics for a variable.
+  21.  first(), last(): These commands are used to return the first or last observation(s) of a variable.
+  22.  na_if(): This command is used to replace specific values with NA.
+  23.  na.omit(): This command is used to remove rows with NA values.
+  24.  pull(): This command is used to extract a single variable as a vector.
+  25.  recode(): This command is used to recode values of a variable.

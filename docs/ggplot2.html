@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Basic Statistical Computing and Data Science Using R</title>
-  <meta name="description" content="Basic Statistical Computing and Data Science Using R" />
+  <title>Chapter 9 ggplot2 | Basic Statistical Computing and Data Science Using R</title>
+  <meta name="description" content="Chapter 9 ggplot2 | Basic Statistical Computing and Data Science Using R" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Basic Statistical Computing and Data Science Using R" />
+  <meta property="og:title" content="Chapter 9 ggplot2 | Basic Statistical Computing and Data Science Using R" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Basic Statistical Computing and Data Science Using R" />
+  <meta name="twitter:title" content="Chapter 9 ggplot2 | Basic Statistical Computing and Data Science Using R" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="dplyr.html"/>
 
-<link rel="next" href="basic-installation.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,29 +135,43 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Basic Statistical Computing and Data Science Using R</h1>
-<p class="author"><em></em></p>
-</div>
-<div id="section" class="section level1 unnumbered">
-<h1 class="unnumbered"></h1>
-<p>R is a programming language and open-source software environment used for statistical computing, data analysis, and visualization. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, in the mid-1990s. R is widely used in both academia and industry for a variety of data analysis tasks, from simple data cleaning and exploration to advanced statistical modeling and machine learning.</p>
-<p>The main strengths of R is its flexibility and ease of use. R has a rich set of built-in functions and packages, but users can also write their own functions and packages, making it possible to customize and extend the language to suit their needs. R has a large and active community of users and developers, who contribute new packages and functionality to the language on a regular basis. This means that R is constantly evolving, and new tools and techniques are being added all the time. It also means that if you are having trouble with R, finding the answer is often only a Google search away.</p>
-<p>R is particularly well-suited for statistical analysis and data visualization. It has a wide range of built-in statistical functions for data analysis, including basic descriptive statistics, hypothesis testing, regression analysis, and time series analysis. R also has powerful data visualization tools, with a variety of built-in plotting functions and packages for creating charts, graphs, and interactive visualizations. These visualization tools allow users to explore data and communicate their findings in a clear and effective way.</p>
-<p>Another key feature of R is its ability to handle large datasets. R can easily handle datasets with millions of observations and hundreds of variables, making it a popular choice for big data analysis. R also has tools for working with messy or incomplete data, including functions for data cleaning, imputation, and transformation.</p>
-<p>This book is a compilation of videos that will help you learn R. We will walk you through everything from installing R and RStudio to installing packages to basic statistics and some deeper data science algorithms. We will spend time discussing how to use R for statistical calculations and what the output that R generates means. Hopefully, when you are finished with this book, you will have a deeper understanding of statistics and data science and how these techniques can be applied to real life.</p>
+<div id="ggplot2" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> ggplot2<a href="ggplot2.html#ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>ggplot2 is a widely used R package for creating high-quality and customizable visualizations. Developed by Hadley Wickham as part of the tidyverse, ggplot2 is based on the Grammar of Graphics, a theoretical framework for visualizing data. The package is built on top of the grid graphics system, which allows for greater control over the layout and appearance of plots.</p>
+<p>ggplot2 follows a layered approach to constructing plots, with each layer representing a different aspect of the visualization. The basic structure of a ggplot2 plot consists of a data set, aesthetics, geometries, and scales.</p>
+<p>Data set: ggplot2 plots are built on a data set, which is usually a data frame or a tibble. The data set should contain all the variables needed for the plot, including any grouping variables for faceting or color coding.</p>
+<p>Aesthetics: Aesthetics are the visual properties of a plot, such as the color, size, and shape of points, lines, and bars. In ggplot2, aesthetics are mapped to variables in the data set using the aes() function.</p>
+<p>Geometries: Geometries are the visual elements used to represent the data, such as points, lines, bars, and areas. In ggplot2, geometries are added to the plot using a geom_<something>() function, where <something> is the name of the geometry.</p>
+<p>Scales: Scales determine how the data is mapped to the visual properties of the plot, such as the range of the x and y axes and the color palette. In ggplot2, scales are set using scale_<something>() functions, where <something> is the name of the aesthetic.</p>
+<p>ggplot2 provides a wide range of geometries, aesthetics, and scales, which can be combined to create complex and informative visualizations. Some of the most commonly used geometries and aesthetics are:</p>
+<ul>
+<li>geom_point(): Displays data as points.</li>
+<li>geom_line(): Connects data points with a line.</li>
+<li>geom_bar(): Displays data as vertical bars.</li>
+<li>geom_histogram(): Displays data as a histogram.</li>
+<li>geom_boxplot(): Displays the distribution of data using a box-and-whisker plot.</li>
+<li>geom_smooth(): Adds a smoothed line to a scatter plot.</li>
+<li>geom_area(): Displays data as a stacked area chart.</li>
+<li>geom_tile(): Displays data as a heatmap.</li>
+<li>geom_hex(): Displays data as a hexagonal heatmap.</li>
+<li>geom_density(): Displays the density of data.</li>
+<li>geom_violin(): Displays the distribution of data using a violin plot.</li>
+<li>geom_jitter(): Adds random noise to points to prevent overlapping.</li>
+<li>geom_abline(): Adds a straight line with a specified intercept and slope.</li>
+<li>geom_hline(): Adds a horizontal line at a specified y-value.</li>
+<li>geom_text(): Adds text labels to the plot.</li>
+</ul>
+<p>Aesthetics include: x, y, color, fill, shape, size, alpha, linetype, group, weight.</p>
+<p>ggplot2 also provides a number of customization options, such as changing the axis labels and titles, adjusting the plot margins, and adding text annotations.</p>
 
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
+<a href="dplyr.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="basic-installation.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -188,7 +202,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-ggplot2.Rmd",
 "text": "Edit"
 },
 "history": {
