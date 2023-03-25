@@ -23,17 +23,21 @@ Once the data dictionary has been created, it is important to ensure that it is 
 
 ##  Components of a Data Dictionary
 
-A data dictionary typically includes several key components, including the following:
+A data dictionary should be well labeled with a title that is connected to the data set ("data dictionary" is not an appropriate title).  There should also be a record of the number of rows and columns in the data set.  A count of missing values should be included for each column.
 
-1.  Data Elements: This section provides a list of all the variables (data elements) in both long and short form, along with a description of each variable and its data type.
+A data dictionary typically also includes several key components, including the following:
+
+1.  Data Elements: This section provides a list of all the variables (data elements) in both long (variable name) and short form (the data label), along with a description of each variable and its data type (numerical or categorical) and sub-type (discrete, continuous, ordinal or nominal). For categorical variables, a list of categories should be included while for numerical variables, the maximum and minimum values should be included.
 
 2.  Data Relationships: This section documents the relationships between different data elements, such as calculations used to create variables or rules linking variables with different names across tables.  Often included here is the type of relationship between the variables (ie, 1-1, 1-many, many-1, or many-many).
 
 3.  Data Sources: This section identifies the sources of data that are used within the system, such as databases, spreadsheets, or other applications.
 
-4.  Data Constraints: This section documents any constraints or rules that apply to the data, such as maximum and minimum values, data formats, or data validation rules.
+4.  Data Constraints: This section documents any constraints or rules that apply to the data, such as theoretical maximum and minimum values (rather than the actual maximum and minimum values in the data), data formats, or data validation rules.
 
 5.  Data Security: This section documents the security measures that are in place to protect the data, such as encryption, access controls, and auditing.
+
+
 
 ##  Benefits of Using a Data Dictionary
 
