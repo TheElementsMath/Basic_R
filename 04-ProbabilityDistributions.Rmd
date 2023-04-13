@@ -1,1 +1,107 @@
 # Probability Distributions
+
+
+Probability distributions are an essential concept in statistics, machine learning, data analysis and many other fields. A probability distribution represents the possible outcomes of a random variable and the likelihood of each outcome. There are many different types of probability distributions, each with their own characteristics and applications. On a basic level, these distributions fall into one of two categories:  discrete and continuous.
+
+##  Definition of Probability Distributions
+
+A probability distribution is a function that assigns probabilities to each possible outcome of a random variable. A random variable is a variable whose value is determined by chance, such as the outcome of a dice roll or the temperature on a given day. The probability distribution of a random variable specifies the probability of each possible value that the variable can take on.
+
+
+Probability distributions can be represented in different ways, depending on the type of distribution. For example, a discrete probability distribution can be represented by a probability mass function, while a continuous probability distribution can be represented by a probability density function.
+
+##  Types of Probability Distributions
+
+
+There are two main types of probability distributions: discrete and continuous.
+
+__Discrete Probability Distributions__
+A discrete probability distribution is a distribution that represents a finite set of possible outcomes. Each outcome has a probability assigned to it, and the sum of all probabilities must equal 1. Some common examples of discrete probability distributions include the binomial distribution, the Poisson distribution, and the geometric distribution.
+
+###  Binomial Distribution
+
+The binomial distribution is a probability distribution that describes the number of successes in a fixed number of independent trials. Each trial has two possible outcomes, which we can call success and failure. The probability of success is denoted by p, and the probability of failure is denoted by $q = 1 - p$. The binomial distribution is characterized by two parameters: $n$, the number of trials, and $p$, the probability of success.
+
+The probability mass function of the binomial distribution is given by:
+
+\[P(X = k) = \binom{n}{k} p^k \times q^{n-k}\]
+
+where $X$ is the number of successes in $n$ trials, $k$ is the number of successes, and $\binom{n}{k}$ is the binomial coefficient, which represents the number of ways to choose $k$ objects from a set of $n$ objects.
+
+###  Poisson Distribution
+
+The Poisson distribution is a probability distribution that describes the number of events that occur in a fixed interval of time or space, given that the events occur independently and at a constant rate. The Poisson distribution is characterized by one parameter: $\lambda$, the mean number of events in the interval.
+
+The probability mass function of the Poisson distribution is given by:
+
+\[P(X = k) = \dfrac{e^{-\lambda} \times \lambda^k}{k!}\]
+
+where $X$ is the number of events in the interval, $k$ is the number of events, $e$ is the mathematical constant $e$, and $k!$ represents the factorial of $k$.
+
+
+###  Geometric Distribution
+
+
+The geometric distribution is a probability distribution that describes the number of independent trials that are needed to achieve the first success. Each trial has two possible outcomes, which we can call success and failure. The probability of success is denoted by $p$, and the probability of failure is denoted by $q = 1 - p$. The geometric distribution is characterized by one parameter: $p$, the probability of success.
+
+The probability mass function of the geometric distribution is given by:
+
+\[P(X = k) = p \times (1 - p)^{k-1}\]
+
+where $X$ is the number of trials needed to achieve the first success, $k$ is the number of trials, $p$ is the probability of success, and $(1 - p)^{k-1}$ is the probability of failure in the first $k-1$ trials, followed by success in the $k$-th trial.
+
+__Continuous Probability Distributions__
+A continuous probability distribution is a probability distribution where the random variable takes on continuous values within a certain range, as opposed to a discrete probability distribution where the random variable can only take on a finite or countably infinite number of values.
+
+In a continuous probability distribution, the probability of any specific value of the random variable is zero, since there are infinitely many possible values. Instead, we talk about the probability of the random variable falling within a certain range of values. This is represented by the probability density function (PDF) of the distribution. The PDF is a function that describes the relative likelihood of different values of the random variable. The area under the PDF over a certain interval gives the probability that the random variable falls within that interval.
+
+The cumulative distribution function (CDF) of a continuous probability distribution is another important concept. The CDF gives the probability that the random variable is less than or equal to a certain value. The CDF is obtained by integrating the PDF over the range of values of the random variable up to that point.
+
+Examples of continuous probability distributions include the normal distribution, the exponential distribution, and the uniform distribution. 
+
+###  The Normal Distribution
+
+The normal distribution, also known as the Gaussian distribution or bell curve, is one of the most important and widely used probability distributions in statistics. It is a continuous probability distribution that is symmetric and bell-shaped, with the peak of the curve at the mean. The curve is defined by two parameters, the mean ($\mu$) and the standard deviation ($\sigma$).
+
+The probability density function of the normal distribution is given by the formula:
+
+\[f(x) = \dfrac{1}{\sigma * \sqrt{2\pi}} \times e^{-(x-\mu)^2 / (2\sigma^2)}\]
+
+where $e$ is the mathematical constant $e$, $\pi$ is the mathematical constant $\pi$, and $\sigma$ and $\mu$ are the standard deviation and mean, respectively.
+
+The normal distribution has some important properties. One of them is that approximately 68% of the area under the curve falls within one standard deviation of the mean (i.e., between $\mu - \sigma$ and $\mu + \sigma$), approximately 95% of the area falls within two standard deviations of the mean (i.e., between $\mu - 2\sigma$ and $\mu + 2\sigma$), and approximately 99.7% of the area falls within three standard deviations of the mean (i.e., between $\mu - 3\sigma$ and $\mu + 3\sigma$). This is known as the empirical rule or the 68-95-99.7 rule.
+
+The normal distribution is widely used in statistical inference and hypothesis testing. Many real-world phenomena can be modeled by the normal distribution, such as heights of individuals, test scores, and errors in measurements. The normal distribution is also useful for approximating other probability distributions and for modeling random noise in signal processing.
+
+The normal distribution is an important concept in statistics and is used extensively in various fields such as physics, engineering, economics, and finance.
+
+###  Exponential Distribution
+
+
+The exponential distribution is a continuous probability distribution that models the time between two consecutive events in a Poisson process. It is also commonly used to model the decay of radioactive materials and the waiting time for the arrival of the next customer in a queue. The exponential distribution is defined by a single parameter, the rate parameter $\lambda$.
+
+The probability density function of the exponential distribution is given by the formula:
+
+\[f(x) = \lambda e^{-\lambda x}\]
+
+where $x$ is the time between two consecutive events, and $e$ is the mathematical constant $e$.
+
+
+One important property of the exponential distribution is that it has a memoryless property. This means that the probability of an event occurring within a certain time period does not depend on how much time has already passed. For example, if the probability of a light bulb burning out in the next hour is 0.05, then the probability of the light bulb burning out in the next hour, given that it has not burned out in the first 30 minutes, is still 0.05.
+
+The exponential distribution is used in many applications, including reliability analysis, queuing theory, and finance. It is often used to model the lifetime of products or systems, and to calculate the probability that a product or system will fail within a certain time frame. In finance, the exponential distribution is used to model the time between price changes in financial markets.
+
+
+##  Uniform Distribution
+
+The uniform distribution is a continuous probability distribution where all values within a specified range have equal probability of occurring. It is often used to model situations where the outcome is equally likely to be any value within a given interval. The uniform distribution is defined by two parameters, the lower and upper bounds of the interval.
+
+The probability density function (PDF) of the uniform distribution is given by the formula:
+
+\[f(x) = \dfrac{1}{b-a}\]
+
+where $a$ is the lower bound of the interval, $b$ is the upper bound of the interval, and $x$ is a value within the interval.
+
+
+The uniform distribution is commonly used in simulations and random number generation. It is also used in statistical inference, such as in hypothesis testing and confidence intervals. In addition, the uniform distribution is used in physics to model the distribution of particles over a range of possible energies.
+

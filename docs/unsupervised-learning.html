@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 dplyr | Basic Statistical Computing and Data Science Using R</title>
-  <meta name="description" content="Chapter 8 dplyr | Basic Statistical Computing and Data Science Using R" />
+  <title>Chapter 10 Unsupervised Learning | Basic Statistical Computing and Data Science Using R</title>
+  <meta name="description" content="Chapter 10 Unsupervised Learning | Basic Statistical Computing and Data Science Using R" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 dplyr | Basic Statistical Computing and Data Science Using R" />
+  <meta property="og:title" content="Chapter 10 Unsupervised Learning | Basic Statistical Computing and Data Science Using R" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 dplyr | Basic Statistical Computing and Data Science Using R" />
+  <meta name="twitter:title" content="Chapter 10 Unsupervised Learning | Basic Statistical Computing and Data Science Using R" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-dictionaries.html"/>
-<link rel="next" href="ggplot2.html"/>
+<link rel="prev" href="ggplot2.html"/>
+<link rel="next" href="k-means-clustering.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -151,67 +151,25 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dplyr" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> dplyr<a href="dplyr.html#dplyr" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>dplyr is a widely-used R package for data manipulation and transformation. A part of the tidyverse, created by Hadley Wickham, the dplyr package provides a fast and intuitive grammar for data manipulation, making it easier for users to manipulate and analyze data with less code. dplyr is built around five main functions:</p>
-<ul>
-<li>filter(): This command is used to select a subset of rows from a data frame based on some condition or set of conditions. For example, if you had a data frame called df and wanted to select only rows where the age variable was greater than or equal to 18, you could use the following code: filter(df, age &gt;= 18).</li>
-<li>select(): This command is used to select a subset of columns from a data frame. For example, if you had a data frame called df with columns called age, gender, and income, and you only wanted to keep the age and income columns, you could use the following code: select(df, age, income).</li>
-<li>mutate(): This command is used to create new variables (i.e., columns) in a data frame based on some computation or transformation of existing variables. For example, if you had a data frame called df with columns called height and weight, and you wanted to create a new variable called bmi that calculated the body mass index for each observation, you could use the following code: mutate(df, bmi = weight / (height^2)).</li>
-<li>summarise(): This command is used to compute summary statistics (e.g., mean, median, standard deviation) for groups of observations based on some grouping variable(s). For example, if you had a data frame called df with columns called group (which had two levels, “A” and “B”) and value, and you wanted to compute the mean value for each group, you could use the following code: summarise(group_by(df, group), mean_value = mean(value)).</li>
-<li>arrange(): This command is used to sort the rows of a data frame based on one or more variables. For example, if you had a data frame called df with columns called name and age, and you wanted to sort the data frame by age (in ascending order), you could use the following code: arrange(df, age).</li>
-</ul>
-<p>These functions allow users to select, filter, arrange, and summarize data in a more efficient and intuitive manner.</p>
-<p>One of the key advantages of dplyr is its speed. dplyr is designed to work efficiently with large datasets, making use of optimized C++ code to perform operations much faster than base R. This means that users can work with larger datasets and complete their analyses more quickly.</p>
-<p>Another advantage of dplyr is its syntax. The syntax is designed to be intuitive and easy to learn. The five main functions (filter(), select(), mutate(), summarise(), and arrange()) are all easy to understand and use.</p>
-<p>dplyr also allows users to chain together multiple operations using the %&gt;% operator. This can make code more readable and easier to understand.</p>
-<p>VIDEO - dplyr pipe operator</p>
-<p>VIDEO - dplyr filter()
-VIDEO - dplyr select()
-VIDEO - dplyr mutate()
-VIDEO - dplyr summarise/ summarise_at()
-VIDEO - dplyr arrange()
-VIDEO - dplyr group_by()
-VIDEO - dplyr left_join()
-VIDEO - dplyr right_join()
-VIDEO - dplyr full_join()</p>
-<p>A longer list of dplyr commands includes:</p>
+<div id="unsupervised-learning" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Unsupervised Learning<a href="unsupervised-learning.html#unsupervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Unsupervised machine learning is a type of machine learning that deals with finding patterns or relationships in data without explicit guidance or supervision. Unlike supervised learning, unsupervised learning does not rely on labeled data but instead tries to identify inherent patterns or structure in the data. There are several popular unsupervised machine learning techniques including:</p>
 <ol style="list-style-type: decimal">
-<li>filter(): This command is used to subset rows based on a logical condition(s).</li>
-<li>select(): This command is used to subset columns of a data frame.</li>
-<li>mutate(): This command is used to create new variables by transforming or computing based on existing variables.</li>
-<li>arrange(): This command is used to sort a data frame by one or more variables.</li>
-<li>group_by(): This command is used to group data by one or more variables.</li>
-<li>summarize(): This command is used to compute summary statistics for each group in a data frame.</li>
-<li>%&gt;% (pipe operator): This command is used to chain together multiple dplyr commands.</li>
-<li>left_join(): This command is used to join two data frames by a common variable(s), keeping all rows from the first data frame and matching rows from the second data frame.</li>
-<li>right_join(): This command is used to join two data frames by a common variable(s), keeping all rows from the second data frame and matching rows from the first data frame.</li>
-<li>full_join(): This command is used to join two data frames by a common variable(s), keeping all rows from both data frames.</li>
-<li>rename(): This command is used to rename columns in a data frame.</li>
-<li>distinct(): This command is used to return unique rows of a data frame.</li>
-<li>count(): This command is used to count the number of observations by group in a data frame.</li>
-<li>case_when(): This command is used to create a new variable with conditional logic.</li>
-<li>if_else(): This command is used to create a new variable with if-else logic.</li>
-<li>between(): This command is used to subset rows based on a range of values.</li>
-<li>top_n(): This command is used to return the top n observations by a specified variable.</li>
-<li>slice(): This command is used to subset rows by row number.</li>
-<li>n(): This command is used to count the number of rows in a data frame.</li>
-<li>min(), max(), mean(), median(), sum(): These commands are used to compute basic summary statistics for a variable.</li>
-<li>first(), last(): These commands are used to return the first or last observation(s) of a variable.</li>
-<li>na_if(): This command is used to replace specific values with NA.</li>
-<li>na.omit(): This command is used to remove rows with NA values.</li>
-<li>pull(): This command is used to extract a single variable as a vector.</li>
-<li>recode(): This command is used to recode values of a variable.</li>
+<li>K-means clustering</li>
+<li>Hierarchical clustering</li>
+<li>Principal Component Analysis (PCA)</li>
+<li>Association Rule Learning</li>
+<li>Density-Based Clustering</li>
 </ol>
-
+<p>The choice of unsupervised learning technique depends on the nature of the data and the specific application requirements.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-dictionaries.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="k-means-clustering.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -242,7 +200,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-dplyr.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-K-Means.Rmd",
 "text": "Edit"
 },
 "history": {

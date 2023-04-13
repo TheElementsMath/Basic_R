@@ -1,0 +1,26 @@
+
+
+#  Hierarchical Clustering
+
+Hierarchical clustering is an unsupervised machine learning technique for clustering. It is a method of partitioning a dataset into clusters based on similarity (or dissimilarity). Hierarchical clustering builds a tree-like structure of nested clusters, called a dendrogram, which provides a visual representation of the clustering process. 
+
+Hierarchical clustering can follow a bottom-up approach, where each data point is initially in its own cluster.  Clusters are then iteratively merged until a stopping criterion is met or all data is merged into the same cluster.
+
+
+Since clustering is based on the idea of similarity, the choice of similarity measure is vital. The choice of similarity measure typically depends on the type of data and the problem at hand. Some popular similarity measures used in hierarchical clustering are:
+
+  *  __Euclidean Distance:__ Euclidean distance is the straight-line distance between two points in Euclidean space. It is suitable for continuous data and assumes that the data follows a Gaussian distribution.
+  *  __Manhattan Distance:__ Manhattan distance, or L1 distance, is the sum of absolute differences between corresponding coordinates of two points. It is suitable for continuous data and assumes that the data follows a Laplacian distribution.
+  *  __Cosine Similarity:__  Cosine distance measures the cosine of the angle between two vectors, representing the similarity in their orientation. It is suitable for text data and other sparse data.
+  *  __Jaccard Similarity:__  Jaccard distance measures the similarity between two sets by calculating the ratio of the size of the intersection to the size of the union of the sets. It is suitable for binary or categorical data.
+
+
+The other consideration for a hierarchical clustering is the linkage method.  Linkage methods are used to determine how two clusters are merged.  While distance metrics measure the distance between points/ clusters, a linkage method describes what the distance metrics are being applied to.  Some popular linkage methods are:
+
+  *  __Single linkage:__  Clusters are merged based on the minimum distance between any two points in the clusters. It tends to produce long and thin clusters.
+  *  __Complete linkage:__ Clusters are merged based on the maximum distance between any two points in the clusters. It tends to produce compact and spherical clusters.
+  *  __Average linkage:__  Clusters are merged based on the average distance between all pairs of points in the clusters. It strikes a balance between single and complete linkage and can produce clusters of varying shapes and sizes.
+    
+VIDEO:  H-Clust
+VIDEO:  Different distance metrics/ linkages
+VIDEO:  Working with dendrograms

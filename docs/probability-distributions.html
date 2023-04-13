@@ -100,7 +100,19 @@
 <li class="chapter" data-level="3.3.2" data-path="learning-about-the-data.html"><a href="learning-about-the-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.3.2</b> Measures of Spread</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="probability-distributions.html"><a href="probability-distributions.html"><i class="fa fa-check"></i><b>4</b> Probability Distributions</a></li>
+<li class="chapter" data-level="4" data-path="probability-distributions.html"><a href="probability-distributions.html"><i class="fa fa-check"></i><b>4</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="probability-distributions.html"><a href="probability-distributions.html#definition-of-probability-distributions"><i class="fa fa-check"></i><b>4.1</b> Definition of Probability Distributions</a></li>
+<li class="chapter" data-level="4.2" data-path="probability-distributions.html"><a href="probability-distributions.html#types-of-probability-distributions"><i class="fa fa-check"></i><b>4.2</b> Types of Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="probability-distributions.html"><a href="probability-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>4.2.1</b> Binomial Distribution</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability-distributions.html"><a href="probability-distributions.html#poisson-distribution"><i class="fa fa-check"></i><b>4.2.2</b> Poisson Distribution</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability-distributions.html"><a href="probability-distributions.html#geometric-distribution"><i class="fa fa-check"></i><b>4.2.3</b> Geometric Distribution</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability-distributions.html"><a href="probability-distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>4.2.4</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability-distributions.html"><a href="probability-distributions.html#exponential-distribution"><i class="fa fa-check"></i><b>4.2.5</b> Exponential Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability-distributions.html"><a href="probability-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>4.3</b> Uniform Distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>5</b> Hypothesis Testing</a></li>
 <li class="part"><span><b>III Creating Codebooks</b></span></li>
 <li class="chapter" data-level="6" data-path="missing-data.html"><a href="missing-data.html"><i class="fa fa-check"></i><b>6</b> Missing Data</a>
@@ -118,6 +130,10 @@
 <li class="part"><span><b>IV The Tidyverse</b></span></li>
 <li class="chapter" data-level="8" data-path="dplyr.html"><a href="dplyr.html"><i class="fa fa-check"></i><b>8</b> dplyr</a></li>
 <li class="chapter" data-level="9" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>9</b> ggplot2</a></li>
+<li class="part"><span><b>V Unsupervised Learning</b></span></li>
+<li class="chapter" data-level="10" data-path="unsupervised-learning.html"><a href="unsupervised-learning.html"><i class="fa fa-check"></i><b>10</b> Unsupervised Learning</a></li>
+<li class="chapter" data-level="11" data-path="k-means-clustering.html"><a href="k-means-clustering.html"><i class="fa fa-check"></i><b>11</b> K-Means Clustering</a></li>
+<li class="chapter" data-level="12" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html"><i class="fa fa-check"></i><b>12</b> Hierarchical Clustering</a></li>
 </ul>
 
       </nav>
@@ -137,7 +153,72 @@
             <section class="normal" id="section-">
 <div id="probability-distributions" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Probability Distributions<a href="probability-distributions.html#probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Probability distributions are an essential concept in statistics, machine learning, data analysis and many other fields. A probability distribution represents the possible outcomes of a random variable and the likelihood of each outcome. There are many different types of probability distributions, each with their own characteristics and applications. On a basic level, these distributions fall into one of two categories: discrete and continuous.</p>
+<div id="definition-of-probability-distributions" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Definition of Probability Distributions<a href="probability-distributions.html#definition-of-probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A probability distribution is a function that assigns probabilities to each possible outcome of a random variable. A random variable is a variable whose value is determined by chance, such as the outcome of a dice roll or the temperature on a given day. The probability distribution of a random variable specifies the probability of each possible value that the variable can take on.</p>
+<p>Probability distributions can be represented in different ways, depending on the type of distribution. For example, a discrete probability distribution can be represented by a probability mass function, while a continuous probability distribution can be represented by a probability density function.</p>
+</div>
+<div id="types-of-probability-distributions" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Types of Probability Distributions<a href="probability-distributions.html#types-of-probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are two main types of probability distributions: discrete and continuous.</p>
+<p><strong>Discrete Probability Distributions</strong>
+A discrete probability distribution is a distribution that represents a finite set of possible outcomes. Each outcome has a probability assigned to it, and the sum of all probabilities must equal 1. Some common examples of discrete probability distributions include the binomial distribution, the Poisson distribution, and the geometric distribution.</p>
+<div id="binomial-distribution" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Binomial Distribution<a href="probability-distributions.html#binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The binomial distribution is a probability distribution that describes the number of successes in a fixed number of independent trials. Each trial has two possible outcomes, which we can call success and failure. The probability of success is denoted by p, and the probability of failure is denoted by <span class="math inline">\(q = 1 - p\)</span>. The binomial distribution is characterized by two parameters: <span class="math inline">\(n\)</span>, the number of trials, and <span class="math inline">\(p\)</span>, the probability of success.</p>
+<p>The probability mass function of the binomial distribution is given by:</p>
+<p><span class="math display">\[P(X = k) = \binom{n}{k} p^k \times q^{n-k}\]</span></p>
+<p>where <span class="math inline">\(X\)</span> is the number of successes in <span class="math inline">\(n\)</span> trials, <span class="math inline">\(k\)</span> is the number of successes, and <span class="math inline">\(\binom{n}{k}\)</span> is the binomial coefficient, which represents the number of ways to choose <span class="math inline">\(k\)</span> objects from a set of <span class="math inline">\(n\)</span> objects.</p>
+</div>
+<div id="poisson-distribution" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Poisson Distribution<a href="probability-distributions.html#poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Poisson distribution is a probability distribution that describes the number of events that occur in a fixed interval of time or space, given that the events occur independently and at a constant rate. The Poisson distribution is characterized by one parameter: <span class="math inline">\(\lambda\)</span>, the mean number of events in the interval.</p>
+<p>The probability mass function of the Poisson distribution is given by:</p>
+<p><span class="math display">\[P(X = k) = \dfrac{e^{-\lambda} \times \lambda^k}{k!}\]</span></p>
+<p>where <span class="math inline">\(X\)</span> is the number of events in the interval, <span class="math inline">\(k\)</span> is the number of events, <span class="math inline">\(e\)</span> is the mathematical constant <span class="math inline">\(e\)</span>, and <span class="math inline">\(k!\)</span> represents the factorial of <span class="math inline">\(k\)</span>.</p>
+</div>
+<div id="geometric-distribution" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Geometric Distribution<a href="probability-distributions.html#geometric-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The geometric distribution is a probability distribution that describes the number of independent trials that are needed to achieve the first success. Each trial has two possible outcomes, which we can call success and failure. The probability of success is denoted by <span class="math inline">\(p\)</span>, and the probability of failure is denoted by <span class="math inline">\(q = 1 - p\)</span>. The geometric distribution is characterized by one parameter: <span class="math inline">\(p\)</span>, the probability of success.</p>
+<p>The probability mass function of the geometric distribution is given by:</p>
+<p><span class="math display">\[P(X = k) = p \times (1 - p)^{k-1}\]</span></p>
+<p>where <span class="math inline">\(X\)</span> is the number of trials needed to achieve the first success, <span class="math inline">\(k\)</span> is the number of trials, <span class="math inline">\(p\)</span> is the probability of success, and <span class="math inline">\((1 - p)^{k-1}\)</span> is the probability of failure in the first <span class="math inline">\(k-1\)</span> trials, followed by success in the <span class="math inline">\(k\)</span>-th trial.</p>
+<p><strong>Continuous Probability Distributions</strong>
+A continuous probability distribution is a probability distribution where the random variable takes on continuous values within a certain range, as opposed to a discrete probability distribution where the random variable can only take on a finite or countably infinite number of values.</p>
+<p>In a continuous probability distribution, the probability of any specific value of the random variable is zero, since there are infinitely many possible values. Instead, we talk about the probability of the random variable falling within a certain range of values. This is represented by the probability density function (PDF) of the distribution. The PDF is a function that describes the relative likelihood of different values of the random variable. The area under the PDF over a certain interval gives the probability that the random variable falls within that interval.</p>
+<p>The cumulative distribution function (CDF) of a continuous probability distribution is another important concept. The CDF gives the probability that the random variable is less than or equal to a certain value. The CDF is obtained by integrating the PDF over the range of values of the random variable up to that point.</p>
+<p>Examples of continuous probability distributions include the normal distribution, the exponential distribution, and the uniform distribution.</p>
+</div>
+<div id="the-normal-distribution" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> The Normal Distribution<a href="probability-distributions.html#the-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The normal distribution, also known as the Gaussian distribution or bell curve, is one of the most important and widely used probability distributions in statistics. It is a continuous probability distribution that is symmetric and bell-shaped, with the peak of the curve at the mean. The curve is defined by two parameters, the mean (<span class="math inline">\(\mu\)</span>) and the standard deviation (<span class="math inline">\(\sigma\)</span>).</p>
+<p>The probability density function of the normal distribution is given by the formula:</p>
+<p><span class="math display">\[f(x) = \dfrac{1}{\sigma * \sqrt{2\pi}} \times e^{-(x-\mu)^2 / (2\sigma^2)}\]</span></p>
+<p>where <span class="math inline">\(e\)</span> is the mathematical constant <span class="math inline">\(e\)</span>, <span class="math inline">\(\pi\)</span> is the mathematical constant <span class="math inline">\(\pi\)</span>, and <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\mu\)</span> are the standard deviation and mean, respectively.</p>
+<p>The normal distribution has some important properties. One of them is that approximately 68% of the area under the curve falls within one standard deviation of the mean (i.e., between <span class="math inline">\(\mu - \sigma\)</span> and <span class="math inline">\(\mu + \sigma\)</span>), approximately 95% of the area falls within two standard deviations of the mean (i.e., between <span class="math inline">\(\mu - 2\sigma\)</span> and <span class="math inline">\(\mu + 2\sigma\)</span>), and approximately 99.7% of the area falls within three standard deviations of the mean (i.e., between <span class="math inline">\(\mu - 3\sigma\)</span> and <span class="math inline">\(\mu + 3\sigma\)</span>). This is known as the empirical rule or the 68-95-99.7 rule.</p>
+<p>The normal distribution is widely used in statistical inference and hypothesis testing. Many real-world phenomena can be modeled by the normal distribution, such as heights of individuals, test scores, and errors in measurements. The normal distribution is also useful for approximating other probability distributions and for modeling random noise in signal processing.</p>
+<p>The normal distribution is an important concept in statistics and is used extensively in various fields such as physics, engineering, economics, and finance.</p>
+</div>
+<div id="exponential-distribution" class="section level3 hasAnchor" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> Exponential Distribution<a href="probability-distributions.html#exponential-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The exponential distribution is a continuous probability distribution that models the time between two consecutive events in a Poisson process. It is also commonly used to model the decay of radioactive materials and the waiting time for the arrival of the next customer in a queue. The exponential distribution is defined by a single parameter, the rate parameter <span class="math inline">\(\lambda\)</span>.</p>
+<p>The probability density function of the exponential distribution is given by the formula:</p>
+<p><span class="math display">\[f(x) = \lambda e^{-\lambda x}\]</span></p>
+<p>where <span class="math inline">\(x\)</span> is the time between two consecutive events, and <span class="math inline">\(e\)</span> is the mathematical constant <span class="math inline">\(e\)</span>.</p>
+<p>One important property of the exponential distribution is that it has a memoryless property. This means that the probability of an event occurring within a certain time period does not depend on how much time has already passed. For example, if the probability of a light bulb burning out in the next hour is 0.05, then the probability of the light bulb burning out in the next hour, given that it has not burned out in the first 30 minutes, is still 0.05.</p>
+<p>The exponential distribution is used in many applications, including reliability analysis, queuing theory, and finance. It is often used to model the lifetime of products or systems, and to calculate the probability that a product or system will fail within a certain time frame. In finance, the exponential distribution is used to model the time between price changes in financial markets.</p>
+</div>
+</div>
+<div id="uniform-distribution" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Uniform Distribution<a href="probability-distributions.html#uniform-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The uniform distribution is a continuous probability distribution where all values within a specified range have equal probability of occurring. It is often used to model situations where the outcome is equally likely to be any value within a given interval. The uniform distribution is defined by two parameters, the lower and upper bounds of the interval.</p>
+<p>The probability density function (PDF) of the uniform distribution is given by the formula:</p>
+<p><span class="math display">\[f(x) = \dfrac{1}{b-a}\]</span></p>
+<p>where <span class="math inline">\(a\)</span> is the lower bound of the interval, <span class="math inline">\(b\)</span> is the upper bound of the interval, and <span class="math inline">\(x\)</span> is a value within the interval.</p>
+<p>The uniform distribution is commonly used in simulations and random number generation. It is also used in statistical inference, such as in hypothesis testing and confidence intervals. In addition, the uniform distribution is used in physics to model the distribution of particles over a range of possible energies.</p>
 
+</div>
 </div>
             </section>
 

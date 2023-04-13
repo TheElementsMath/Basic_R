@@ -1,0 +1,49 @@
+# (PART) Unsupervised Learning {-}
+
+#  Unsupervised Learning
+
+Unsupervised machine learning is a type of machine learning that deals with finding patterns or relationships in data without explicit guidance or supervision. Unlike supervised learning, unsupervised learning does not rely on labeled data but instead tries to identify inherent patterns or structure in the data. There are several popular unsupervised machine learning techniques including:
+
+  1.  K-means clustering
+  2.  Hierarchical clustering
+  3.  Principal Component Analysis (PCA)
+  4.  Association Rule Learning
+  5.  Density-Based Clustering
+    
+The choice of unsupervised learning technique depends on the nature of the data and the specific application requirements.
+
+#  K-Means Clustering
+
+K-means clustering is an unsupervised machine learning algorithm used for grouping similar data points into clusters. It is widely used in various fields, such as computer science, engineering, natural language processing, and bioinformatics. The algorithm aims to partition a given set of $n$ data points into $k$ clusters based on their similarity. In this article, we will discuss the k-means clustering algorithm, its working principle, and its advantages and disadvantages.
+
+
+The k-means algorithm is an iterative clustering algorithm that works by iteratively assigning data points to the closest cluster centroid and updating the cluster centroids based on the mean of the assigned data points. 
+
+The algorithm works as follows:
+
+  1.  Initialization: Randomly select k data points from the dataset as the initial centroids.
+  2.  Assigning Data Points: Assign each data point to the nearest centroid using the Euclidean distance metric.
+  3.  Updating Cluster Centroids: Recalculate the centroid of each cluster by taking the mean of all the data points assigned to that cluster.
+  4.  Repeat steps 2 and 3 until the cluster assignments do not change or the maximum number of iterations is reached.
+
+The algorithm terminates when the cluster assignments do not change or when a maximum number of iterations is reached. The resulting $k$ clusters represent the partitioning of the data into $k$ distinct groups.
+
+There are several advantages to using k-means clustering.
+
+  *  Scalability: K-means clustering is scalable and can handle large datasets with ease. It is widely used in data mining and big data applications.
+  *  Fast: k-means clustering is computationally efficient and can converge quickly. It is a popular choice for real-time applications.
+  *  Simple: k-means clustering is easy to implement and understand. It requires minimal input parameters, making it a popular choice for beginners.
+  *  Versatile: k-means clustering can be used in a wide range of applications, such as customer segmentation, image segmentation, and anomaly detection.
+
+However, there are a few drawbacks of the k-means clustering algorithm.
+
+  *  Sensitive to Initial Centroids: k-means clustering is sensitive to the initial centroid positions. Different initializations can result in different cluster assignments and can impact the quality of the resulting clusters.
+  *  Need to Specify $k$: The user needs to specify the number of clusters $k$ beforehand, which can be difficult in some cases.
+  *  Not Suitable for Non-convex Shapes: k-means clustering assumes that the clusters are spherical and do not overlap. It may not work well for non-convex shaped clusters.
+
+k-means clustering is widely used in various fields, such as: image segmentation, anomaly detection, customer segmentation, and document clustering.
+
+VIDEO - Setting up K-means clustering
+VIDEO - Selecting the number of clusters
+VIDEO - K-means clustering example
+VIDEO - K-means start to finish

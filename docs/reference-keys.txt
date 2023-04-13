@@ -17,6 +17,14 @@ descriptive-statistics
 measures-of-central-tendency
 measures-of-spread
 probability-distributions
+definition-of-probability-distributions
+types-of-probability-distributions
+binomial-distribution
+poisson-distribution
+geometric-distribution
+the-normal-distribution
+exponential-distribution
+uniform-distribution
 hypothesis-testing
 missing-data
 dealing-with-missing-data
@@ -28,3 +36,6 @@ benefits-of-using-a-data-dictionary
 examples
 dplyr
 ggplot2
+unsupervised-learning
+k-means-clustering
+hierarchical-clustering
