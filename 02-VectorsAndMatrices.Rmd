@@ -19,9 +19,8 @@ R also has several built-in functions for working with vectors, such as length()
 
 Overall, vectors are a fundamental data type in R and are essential for many data analysis tasks. Understanding how to create, manipulate, and access elements of vectors is an important skill for any R programmer.
 
-VIDEO - Create a vector, do some vector operations like + (talk about recycling rule).  Combine vectors using c() perhaps discuss coercion.
+[Introduction to Vectors](https://youtu.be/y89fs5kDk3o)
 
-VIDEO - Talk about vector index (+ and -).  Create new vectors from vector index, duplicate indexes, use : to range through index, Talk about logical vectors.  Name vector members.
 
 Some vector functions that might be useful for you to explore include:
 
@@ -55,9 +54,9 @@ Another useful feature of matrices in R is that they can be converted to other t
 
 Matrices are a powerful tool in R for organizing and manipulating data in a two-dimensional format. Understanding how to create, index, and perform operations on matrices is vital to be proficient in R.
 
-VIDEO - Construct a matrix using "matrix( C(), nrow = )".  Extract specific values, rows, columns, name rows/ columns.  cbind, rbind.
+[Introduction to Matrices](https://youtu.be/mKUIoMzBLmE)
 
-VIDEO - Matrix Arithmetic, Transpose matrix, determinant
+
 
 Some of the many functions that are useful to know when dealing with matrices include:
 
@@ -90,7 +89,8 @@ Lists in R are indexed using double square brackets ([[ ]]) or single square bra
 
 Lists are widely used in R for a variety of tasks, such as storing and manipulating complex data structures, passing arguments to functions, and creating nested data structures. With their flexibility and versatility, lists are an essential data structure in R programming.
 
-VIDEO - Create a list, use [] and [[]] to extract items from a list.  Name members of a list, 
+
+[Introduction to Lists](https://youtu.be/UWXacJKElms)
 
 Some of the essential functions for lists include:
 
@@ -118,7 +118,7 @@ Once you have a data frame, you can perform various operations on it, such as se
 
 Data frames also play a crucial role in data visualization in R. The flexibility of the data frame structure allows users to create plots with a high degree of customization ultimately resulting in publication-quality visualizations.
 
-VIDEO - Creating DFs, nrow, head, column slices, row slices, (Ignore dplyr)
+[Introduction to Data Frames](https://youtu.be/kPf1lGP74Kw)
 
 Some common functions for data frames include:
 
