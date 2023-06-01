@@ -14,9 +14,9 @@ There are many types of qualitative data visualization techniques.  Here, we foc
 
 Qualitative data visualization is an important tool for analyzing and understanding complex, non-numerical data. It can help analysts gain new insights and identify patterns and relationships that may not be immediately apparent from the data alone. However, it is important to approach qualitative data visualization with a critical eye and to be mindful of the subjectivity involved in interpreting the data.
 
-VIDEO - Frequency, relative frequency distributions.
+[Frequency, Relative frequency distributions](https://youtu.be/h8GCCl6R_1I)
 
-VIDEO - Bar charts & Pie charts
+[Bar charts & Pie charts](https://youtu.be/Cq3kmM_pyTY)
 
 
 
@@ -28,9 +28,9 @@ There are many types of quantitative data visualization techniques, each suited 
 
 One important consideration when visualizing quantitative data is to choose the right type of visualization for the data and the research question. Different types of visualizations can emphasize different aspects of the data and may be more or less effective depending on the context. It is also important to ensure that the visualization accurately represents the data, without distorting or misleading the viewer.
 
-VIDEO - Frequency, relative frequency, cumulative frequency distributions.
+[Frequency, Relative frequency, Cumulative frequency distributions](https://youtu.be/C12v6rXh1ZQ)
 
-VIDEO - Frequency histograms, cumulative frequency plots, Scatter plots.
+[Frequency histograms, Cumulative frequency plots, Scatter plots](https://youtu.be/F0Z-k2TLE3o)
 
 
 
